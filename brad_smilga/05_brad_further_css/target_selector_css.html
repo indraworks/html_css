@@ -10,13 +10,42 @@
        color:white;
       
      }
-     
+     /* utk direct dibawah div */
+     div>p {
+       background:pink;
+     }
 
 
      /* utk sibling */
      div+p {
        color:darkgreen;
      }
+
+     /* utk atribute disini mis hanya terutlus target saja maka semua link kena
+        tapi jika specisfic hanya [target="_blank"] maka hanya yg punya target blank saja
+     */
+     /* by atribute */
+     /* a[target] { //smua link kena
+       color:blue;
+     } */
+       a[target="_blank"] { /* hanya link google berwarna merah */
+         color:red 
+       }
+       /* diabwah ini kita akan bbuat form yg ada input type text dan email dan button
+        nah target berdaarkan type tadi makanya dsbut atribut specific
+       */
+       input[type="email"] {
+         color:darkorange;
+         font-size:18px;
+       }
+       input[type="text"] {
+         color:greenyellow;
+         font-size:17px;
+       }
+       input {
+         display:block;
+         margin-bottom: 5px;
+       }
   </style>
   <title>Targete Selector</title>
 </head>
@@ -32,7 +61,19 @@
     
   </div>
   <p>Lorem {sibling} ipsum dolor sit em.</p>
-</body>
+   <!-- utk target atribute dibawah ini  -->
+   <a href="!#" >Page 1</a> <a href="#" target="_self">Page 2</a>
+   <a href="http://www.google.com" target="_blank">Google</a>
+
+   <br>
+   <br>
+   <!-- mmbuat form -->
+   <form >
+     <input type="text" placeholder="name">
+     <input type="email" placeholder= 'email'>
+     <input type="submit" >
+   </form>
+  </body>
 </html>
 
 <!-- 
@@ -41,9 +82,14 @@ jika mis div> x maka ini anak dibawah yg diselect
          div>+x  x nya ini sejajar samam div
          jika ada dibawahnya 2 tingkatan atau lebih mis 
          diatas div>ul>li> p nah mau select p didalamnya li
-
-
-
+         maka sama dcss :
+          div>ul>li>p {
+            background:red
+          } //hanya p saja yg kena 
+          
+utk selector kusus bagian link atau form penjelasan diatas
+nah utk atribute gimana misal link kan ada atribute nah  di css
+atribute di beri tanda [atribute yg jadi target]
 
  -->
 
