@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>menu_Styling</title>
+
+  <style>
+   /* ngulik side-menu */
+   body {
+     font-family: Arial, Helvetica, sans-serif;
+   }
+     .side-menu {
+        
+        border:1px solid #ddd;
+        border-radius: 10px;
+        width:300px;
+        padding:20px;
+       
+        
+     }
+     .side-menu li {
+       list-style: none;
+       line-height: 2.4em;
+        border-bottom: 2px dotted #ddd;
+      }
+      /* utk baris li trakhir disebut last child kita bisa hilangkan garisnya  */
+    li:last-child {
+        border-bottom:none;
+      }
+    li a {
+      text-decoration: none;
+      color:#333;
+      font-size: 18px;
+      font-weight: bold;
+
+    }
+    li a:hover {
+      color:coral;
+    }
+
+ /* end side-menu */
+
+ /* Navbar styling */
+    .navbar {
+      background: #4c6ca0; /*fb warna */
+      color:#fff;
+      padding:0;
+      margin:0;
+      list-style: none;
+      overflow: auto; /*ii supaya background gak ilang gegara linya 
+      di buat floating kekiri smua  */
+   
+    }
+    .navbar li {
+      float:left;
+     
+    }
+     /* nguik bagian a nya atau linknya */
+     .navbar li a {
+       display:block; /* dgn display bllcok dia brdiri sndiri per a nya*/
+       text-decoration: none; /*ilangin garis bawah */
+       color:#fff;
+       padding:25px 20px; /* buat jarak masing2 tulisan krn bock jadi dia berdir sdnir
+       per -a tanpa display blcok gak akan bisa 
+       padding jgn ditaruh di li kn gka smua kena sbba per a udah akay display blcok!*/
+       font-size: 16px;
+     }
+     .navbar li a:hover {
+       background-color: #446190;
+       color:#ddd
+     }
+
+ /* end Navbar */
+
+
+
+  </style>
+</head>
+<body>
+
+     <div >
+        <ul class="navbar">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <!-- kit abuat classnya di ul krna paren dari li dan a bukan di bgaian divnya
+    atau containernya  -->
+   <div >
+    <ul class="side-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Service</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+
+   </div>
+  
+</body>
+</html>
+
+
+<!-- 
+dibagian ini kita akan membaut side menu dan kemdian mmbuat navbar
+akan tetap sama utk side-menu kit aakan buat dulu 
+undentine list dan li masing2 ada a hrefnya
+dan nnati kita akan buat class yg wraping ini smua kasih nama side-menu
+kmudian kita kasih broder masing2 kasih background 
+jadi yg pertama di ulik 
+1.classnya side-menu 
+menu class side-menu li nya 
+kmdia class side-menu li a 
+jadi itu urutanya 
+
+//////navbar ///////
+navbar sama dgn diaas kita copied 
+kita ganit 
+yg diulik class navbarnya 
+ngulik navbar li nya dan arah floatnya 
+stlahnya 
+navabr li a nya 
+
+
+
+ -->

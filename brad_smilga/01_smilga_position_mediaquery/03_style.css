@@ -1,0 +1,54 @@
+/* reset */
+* {
+   box-sizing: border-box;
+   padding:0px;
+   margin:0px;
+}
+
+div {
+  border:3px solid red;
+  margin-top:40px;
+  background:yellow;
+  padding:10px;
+  position: static;
+}
+
+/*kalau posisi static(divnya/parent) one saya kasih 50px top maka gak akan efect
+tapi one saya kasih postion relative dgn top 50px maka efek turun kebwah dia 
+tutuipin two
+jadi dia gerak sesuai urutanya nya kebawah (line command)
+*/
+.one {
+  position:relative;
+  background:blue;
+  color:white;
+  top:50px;
+  left:50%;
+ 
+}
+.two {
+  position:relative; /* kalau pasang static apapun itu tetap gak ubah normal aja */
+  background:green;
+  color:white;
+  bottom:50px; /* naik keatas 50px */
+}
+
+.special {
+  background:purple;
+  color:white;
+  font-size: 20px;
+
+}
+
+/*
+https: //www.w3schools.com/css/css_positioning.asp
+psotion static adalah posisi biasa normal kiri kana settingnya 
+itu sahja dan defaitl dari web/halaman poisiton adalah static
+contoh diatas jik aketik di di static otomatis smua rata kiri( default/normal)
+itu saja 
+kalau mau gerak2 maka pakai posiiton relative,kalau mau tetap normal gak ngapain maka pakai 
+static
+*/
+
+
+

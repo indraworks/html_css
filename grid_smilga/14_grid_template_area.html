@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+     .container{
+       margin:20px;
+       height:100vh;
+       display:grid;
+       grid-gap:10px;
+       border:10px solid black;
+       grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+       grid-template-rows: 100px 100px 100px 100px 100px;
+       /* kita buat susun dulu di parent composisi grid tempalte areanya */
+       /* tetukan dulu row yg dibuat dgn tanda petik "" stlahnya column area cell tandai dgn hurud a,b,c etc */
+      grid-template-areas: 
+      "a a a b b" 
+      "a a a b b"
+      "c c c b b"
+      "d d d d d"
+      "e f f f f"
+           
+      ;
+    
+    
+      }
+
+     .cell {
+       border:3px solid red;
+       text-transform: capitalize;
+       text-align: center;
+       padding:10px;
+       background: #dedede;
+       
+     }
+     .cell-1 {
+      background: #581f18;
+      grid-area:a
+  }
+.cell-2 {
+  background: #f0a202;
+  grid-area: b;
+}
+.cell-3 {
+  background: #d95d39;
+  grid-area: c;
+}
+.cell-4 {
+  background: #202c59;
+  grid-area: d;
+}
+
+.cell-5 {
+  background: #51cb20;
+}
+ 
+.cell-6 {
+  background:pink;
+  grid-area:f
+}
+
+
+   </style>
+    
+
+  <title>Gride-lines</title>
+</head>
+<body>
+  <div class="container">
+       <div class="cell cell-1">cell-1</div>
+       <div class="cell cell-2">cell-2</div>
+       <div class="cell cell-3">cell-3</div>
+       <div class="cell cell-4">cell-4</div>
+       <div class="cell cell-5">cell-5</div>
+       <div class="cell cell-6">cell-6</div>
+       
+
+  </div>
+</body>
+</html>
+
+<!-- 
+
+JIKA TERBENTUK KOTA K CELL BARU KARENA HASIL SPAN DARI 
+CEL NTH KARENA GRID COLUMNS ATAU GRID_ROW MAKA 
+ITU ADALAH BUATAN DARI JS TETAPI DIA IMLICIT ANDA LIHAT
+PADA CELL YG ABU2 PALIGN BAWAH bAIK ROW DAN COLUMN BLUM ADA NO LINE 
+KARENA IMPLICIT 
+
+utk gridlines kit abisa nuat naming line line nomor dgn metode 
+start dan end  dariada nulis 
+grid-column:1/-1;
+grid-row:1/-1
+kit abisa sisipkan buat dgn cara pasang nama diline2 nomornya
+[start] [end]
+
+ -->
+
+<!-- TENTANG GRID TEMPALTE AREA ,MERUPAKAN GABUGNAN CELL2 KITA HARUS TULIS CETAKANNYA 
+     LEBIH DULU BARU DIDECLARASIKAN DI DALAM MASING2 ANAK CELL DAI SICELL ITU IKUT GRID 
+     TEMPALTE AREA YG MANA??
+
+jadi tentukan dulu aranya jumlah columnnya dan jumlah baris nantinya 
+utk grid area yg mau di buat
+tempatkan area2 dgn hhrud2 dari baris "" dan angka2 utk area
+setlahnya baru buat grid-area: cell2 ikutk yg mana dari area "hurf"2 tadi sbagai patokanya nya
+cell2nya diasumsikan sebgai ahuruf dan grid araenya diasumsikan sgabi kumulan hrufu2 yg sama sesuai dgn pola layout yg diminta
+
+-->
+

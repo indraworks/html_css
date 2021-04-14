@@ -1,0 +1,60 @@
+
+* {
+  padding:0px;
+  margin:0px;
+  box-sizing: border-box;
+}
+
+/* daripada nulis ulang 3x karen adalam div sama2 element sama
+ hanya beda class maka bbackground taruh di class yg ain ditulis di div
+*/
+div {
+  float:left;
+  width:33.33%;
+  height:200px;
+}
+
+
+.one {
+  /* float:left;
+  width:33.33%;
+  height:100px; */
+  background:red;
+
+}
+.two {
+/* float:left;
+width:33.33%;
+height:100px; */
+background:blue;
+}
+
+.three {
+/* float:left;
+width:33.33%;
+height:100px; */
+background:green;
+}
+
+/* ingat kalau habis float harus diclear kalau mau buat element dibawahya 
+agar tidak kena effect dari atruan float diatas
+
+*/
+h1 {
+  clear:both; /* clear both utk float kri -kanan efect 22nya ilang  */
+}
+
+/*
+yang mau dibuat apa?jadi kita mau buat 3 buah kotak dilayar dibagi jadi 3 column
+papkaia apa?pakai float !
+ya dgn float kit abisa buat caranya smua yg dibuat /class one,two,three paragram
+jadi 3 colum dgn terapkan float:left jadi otomatis 
+kotak1 kekiri disisi,otmatis kotak2 g=ngisi kiri tapi sblah dari kotak1 ,dgmikian juga kotak3 
+ngisi ke kiri stlah sblah kotak 2
+nah supaya bagi 3 maka kita arus buat widthnya sbasar 33.33% dari layar
+nah karena  dalam wraping body smua gunakan div sbgai pemisah tag kita cukup
+deklarae float ini dibagain div saja 
+
+
+
+*/

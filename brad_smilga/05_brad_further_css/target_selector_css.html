@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+     div>ul>li>p {
+       background:red;
+       color:white;
+      
+     }
+     
+
+
+     /* utk sibling */
+     div+p {
+       color:darkgreen;
+     }
+  </style>
+  <title>Targete Selector</title>
+</head>
+<body>
+  <div>
+    <p>Lorem ipsum dolor sit em1.</p>
+      <ul>
+        <li>item1</li>
+        <li><p>item2 </p></li>
+        <li>item3</li>
+      </ul>
+    <p>Lorem ipsum dolor sit em2.</p>
+    
+  </div>
+  <p>Lorem {sibling} ipsum dolor sit em.</p>
+</body>
+</html>
+
+<!-- 
+jai gini selector ini dibuat utk ngasih object eleemnt 
+jika mis div> x maka ini anak dibawah yg diselect
+         div>+x  x nya ini sejajar samam div
+         jika ada dibawahnya 2 tingkatan atau lebih mis 
+         diatas div>ul>li> p nah mau select p didalamnya li
+
+
+
+
+ -->
+
+
+

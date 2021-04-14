@@ -1,0 +1,63 @@
+/* iport dari google fonts poppins */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins&display=swap');
+
+/* reset */
+*,
+::before,
+::after {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* GLobla caa variable */
+:root {
+  --primaryColor: #3fd0d4;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #afafaf;
+  --mainTransition: all 0.3s linear; /*hover utk smua button  */
+  --mainSpacing: 0.25rem;
+  --lightShadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.25); /* yg cerah shadownya*/
+  --darkShadow: 4px 10px 5px 0 rgba(0, 0, 0, 0.25); /* yg gelap shadownya*/
+  /* yg shadow diatas adalah :x y blur rgbakotak rgba_shadownya ,utkspread kita kasih 0
+      
+     */
+}
+body {
+  /* yg tanda " ini berasal dari luar maka ditulis dlm petik*/
+  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*
+cara ambil font pergi ke google font
+ketik lato di search kt,u pilih yg 300, 400
+kmudia pilih bagian import jgn dulu diambil karena kita 
+akan ambile font poppins pilih klik brows fonts diatas delete yg lato ketik yg poppin
+langsung tambahkan di bagian import dgn klik tadi ootomatis 
+lato -->utk semua font tag
+poppins -->khusu utk header saja
+
+
+box shadow generator bisa di google 
+box shdaow pilihah x y blurnya rgb1(warna1 0,0,0,opacitynya) rgb2(warna1 0,0,0,opacitynya) 
+boc sahow ada websitenya :
+https://cssgenerator.org/box-shadow-css-generator.html
+https://www.cssmatic.com/box-shadow
+
+*/
+
+/*
+GLoball variable css apa itu ??
+ya kita gak mau ulang pekerjaan kita utk buat mnuis propertis
+contoh mulai font warna layar transition utk smua tombol jika dihover etc utk itu dibuat 
+gloaba variable css agar bisa di pakai utk smua bagian tag dsluruh tag css
+gak nukis ulang cukup sklai dan panggil variablenya
+
+
+
+
+*/

@@ -1,0 +1,43 @@
+ p .a {
+   /* terlihat untk inline murni sama dengan span
+   tinggi dan lebar gak ngaruh apa2 height/width 
+   gak bisa diset hnay padding saja 
+   kalau padding di tinggikan malah dia nutup smua tulisan samping dan atas
+   posisi tetap sama gak ada yg tergeser coba set 30px ,hasilnya 
+   smua tulisan baris gak ada yg terdesak keline baru
+   */
+  display:inline;
+  width:100px;
+  height:100px;
+  padding:30px;
+  border:1px solid grey;
+  background:yellow;
+}
+
+p .b {
+  /*sama dgn inline hanya dia width dan height mmpengaruhi baris yg launnya harus pindah kebawahnya
+  baris baru dan height atau width memakan baris2 tulisan yg lainnya 
+  jadi property block disini memastikan utk membuat tulisan sebelahnay lanjut ,tetapi stlah layar 
+  ujungkanan mentok tulisan sambungnay tadi harus pindah sejauh height propery dari iniline block ii.
+  
+  sjauh nilai property heigth 
+  yg diunyainya */
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  padding: 3px;
+  border: 1px solid grey;
+  background: yellow;
+}
+
+p .c {
+  /* sudah pasti property ini murni milik dirinya jadi 1 line baris smua dioqupied smua yg disamping kananya harus pindah baris
+   kebaris baru !
+  */
+  display: block;
+  width: 100px;
+  height: 100px;
+  padding: 3px;
+  border: 1px solid grey;
+  background: yellow;
+}

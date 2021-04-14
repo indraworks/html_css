@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VH and VW</title>
+
+  <style>
+  *{
+    box-sizing: border-box;
+    padding:0px;
+    margin:0px;
+  }
+  body {
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  header {
+     background:#333 url('https://source.unsplash.com/daily') no-repeat center center/cover; /* cover ya jgn coverage!fuck! */
+     color:#fff;
+      height:100vh;
+      /* ingat utk 100vh artinya dar top ke botom garisnya mmg ada 100 lines view port ,utk width sama 100vw kalau 50 brarti lebar hanya
+      seprath halaman saja ,kita jarang pake cukup vh saja 
+      kalau pake 100% maka ya sudah 100% tergantung dari content di htmlnya /body jadi sluas itu lebarnya luas tergantung isi contenct
+      dari tagnya !*/
+      text-align:center ;
+      padding:2rem;
+      padding-top:10rem;
+
+    }
+    header h1 {
+      font-size: 3.5rem;
+    }
+    header p {
+      margin:1.5rem 0;
+    }
+   .btn {
+     display: inline block;
+     text-decoration: none;
+     background:#f4f4f4;
+     color:#333;
+     padding:0.75rem 2rem;
+   }
+   section h3 {
+     font-size: 2.5rem;
+     padding:0rem 1.5rem;
+
+   }
+   section p {
+     padding:1rem 1.5rem;
+   }
+   /* kita mau ubah ini supaya agak bagus setting tulisan waktu dia hp di putar landscape */
+   
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Our Website</h1>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+  temporibus autem pariatur ut excepturi.</p>
+  <a href="#" class="btn"><strong>Find Out More</strong> </a>
+
+  </header>
+  <section>
+    <h3>Introduction</h3>
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus hic corporis deserunt. 
+       Fuga, minima. Architecto laborum recusandae cumque reprehenderit quaerat ex soluta adipisci 
+       dolorem aliquid amet mollitia eveniet dolores rem nemo, dignissimos illum omnis?</p>
+  </section>
+
+</body>
+</html>
+
+<!-- VH and VW ini beda ya misaljan kita buat adalah ukuran layar
+  yg mancu pada garis line dari atas top port kebwah layar yadi 0nya itungannya 
+  dari paling atas veritkl dan kebawah adalah paling tinggi 100
+  jadi kalau kita punya gambar background kmudian kita buat height:100vh maka dia akan 
+  vover tinggi dari atas smpai kebawah 
+  kalau nilai cuman 50vh brarti dari atas sampai tengah layar saja 
+  utk vw sama tapi itunganya width tapi jarang kit apakai ,biasanya gambbar image kit aberi cover
+  utk width skrg kitapraketkan sbb ( litah diatas)
+
+Perlu diiingat 100vh gak ada hubunganya dgn besar /tingginya sbuah content jadi upon ada 
+kita tambah section otomatis dia akan terdesak /terisi  kit abuat 2 section diatas
+
+ -->

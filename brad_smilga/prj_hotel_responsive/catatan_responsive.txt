@@ -1,0 +1,50 @@
+
+
+/////key responsive /////
+saat ini kita mdisplay di html kit adgn css:block atau tipe float
+kit ablum gunakan flexbox dan grid
+key responsive disini antara lain yg harus dipelajari:
+-set viewport/scale
+ pjlasan singkat:
+
+-User fluidds widht as oppose to fix
+ pjls singkat: remebnering usig fluix max-width 
+
+
+-Media queries different css styling for different screen size
+ hwen we use them,diaasi max-width tergantung screen size
+
+-Rem units over px
+ pakai rem krn huulu di web 16px default =1rem gak brubah 
+
+-Mobile first method
+  kita set dulu utk mobile/minimize size baru nnti diset max-width dgn ukuran yg besar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

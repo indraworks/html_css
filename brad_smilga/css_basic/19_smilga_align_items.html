@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+
+     /* di lfexbox align-items utk atur child dibagian columns
+       syaratnya dicontainer kita harus set tingginya height:mis 400px
+       dan ada macam2 align-item : 
+       -strecth :ini otomatis ikut dari tinggi memanjang
+       -flex-start:posiit pling atas/awal
+       -flex-end:posisi pling bawah
+       -center;
+       -bae-line //mirip streccth 
+
+     
+
+     */
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: #f3f3f3;
+      }
+      .container {
+        height:400px;
+        height:100vh;
+        border:1px solid red;
+        display:flex;
+        align-items:strecth; /*ngisi verickal atas bawah*/
+        /* align-items:flex-start; /*brada pling atas */
+         /* align-items:flex-end; brada pling bawah  */ 
+        align-items:center; /* berada di tengah veritikal*/
+        /* align-items: baseline; */
+        /* base line kita pake contoh di besarkan box 1 font:65px
+           terlihat bahwa box-2 sd 5 ngawah di tengah samping box-1  
+           ada space dari top sbesar 1/2 besar box 1 dan mreka box2-sd 5
+           ini scara horisontal ada di center box-1
+           dan box1 ujung atasnya masih nempel di border top halaman
+        */
+        align-items:strecth;
+        /*kalau strecth ini dia akan turun ada space dari border top ( pada box-1) */
+      }
+     .box {
+       padding:30px;
+       text-align: center;
+       font-size: 30px;
+       color:#f3f3f3;
+      
+     }
+      .box-1 {
+        background:#581f18;
+        font-size:65px;
+      }
+      .box-2{
+        background:#f0a202;
+      }
+      .box-3 {
+        background:#d95d39;
+      }
+      .box-4 {
+        background:#202c59;
+      }
+      .box-5 {
+        background:#51cb28;
+      }
+
+       .generic {
+        background:#202c59;
+      }
+
+
+
+  </style>
+    <title>smilga align-items</title>
+</head>
+<body>
+  <!-- parent:flex-contaner -->
+  <div class="container">
+    <!-- children flex-items -->
+     <div class="box box-1"><h3>box-1</h3></div>
+     <div class="box box-2"><h3>box-2</h3></div>
+     <div class="box box-3"><h3>box-3</h3></div>
+     <div class="box box-4"><h3>box-4</h3></div>
+     <div class="box box-5"><h3>box-5</h3></div>
+      <div class="box generic"> <h3>box-G</h3> </div>
+      <div class="box generic"> <h3>box-G</h3> </div>
+      <div class="box generic"> <h3>box-G</h3> </div>
+      <div class="box generic"> <h3>box-G</h3> </div>
+      <div class="box generic"> <h3>box-G</h3> </div>
+      <div class="box generic"> <h3>box-G</h3> </div>
+      <div class="box generic"> <h3>box-G</h3> </div>
+      <div class="box generic"> <h3>box-G</h3> </div>
+      <div class="box generic"> <h3>box-G</h3> </div>
+      <div class="box generic"> <h3>box-G</h3> </div>
+      <div class="box generic"> <h3>box-G</h3> </div>
+      <div class="box generic"> <h3>box-G</h3> </div>
+
+  </div>
+  
+</body>
+</html>

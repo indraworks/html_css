@@ -1,0 +1,27 @@
+catatan ukuran utk setting di html/css
+
+ukuran unit satuan yg absolute yg dipakai:
+-cm ukuran dalam cm
+-mm ukuran dalam mm
+-in ukuran dalam satuan inch
+-px (pixel) ukuran dalam satuan dimana 1px = 1/96 inch
+     ini biasa dipakai halaman html( comonly)
+-pt (points) ukuran yg biasa di pakau di msword tapi
+    bisa digunakan di html utk standard ( ipt = 1/72)
+-pc Picas picas(1pc =12pt)
+
+
+
+ukuran unit  satuan yg relative yg dipakai
+% - to parent element,jadi mentepakan ukuran dari parent
+     element contoh:utk padding,margin,paragrap,body 
+em -to fontSize parent element contoh parent div body, jdi parent eleement ukuran html 16px
+    nah di element anak ada pragaraf mau pake 1.2em 
+    (berati ukuranya = 1.2*16px) maka kusus utk pragaraf itu besarnya 
+    diset jadi 1.2em
+rem - ukuran  ini diambil dari default html =16px ,bisa dilihat setingnya di google
+     borser jadi utk bagian elelent mau diubah ukuranya berpatokan defaut dari html
+     page saat itu seting defaultnya berapa apakah 16px kah atau 10px kah 
+     mis sbuah paragraf diset 1.2rem brarti ukuranya = 1.2*16px( thtml default)
+vw = vieport width = to per- 1% ukuran lebar  layar htmlpage  
+vh =viewport hight = to per -1% ukuran tinggi layar html

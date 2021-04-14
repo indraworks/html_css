@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /*  SECNARIO DGN MEDIA QURY  YAITU JIKA PAGE LAYER ADA DI TABLE 768px maka jadi 2 COL/2fr
+       DAN JIKA MOBILE HANSATE LAYAR ,MAKA jADI 1COL/1fr saja 
+    
+    
+    */
+
+   .container {
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+   }
+
+    @media(max-width:768px){
+        /* cell container behaviornya di taruh disini  */
+         .container {
+                display:grid;
+                grid-template-columns: repeat(2,1fr);
+   }
+    }
+
+   @media(max-width:450px){
+     /* cell container behaviornya di taruh disini  */
+   .container {
+        display:grid;
+        grid-template-columns: 1fr;
+      }
+   }
+
+  </style>
+  
+  
+  
+  <title>Grid Media Query</title>
+</head>
+<body>
+  <div class="container">
+     <div class="item">
+       <h3>heading</h3>
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+         Consequuntur quibusdam expedita animi accusamus laborum optio.</p>
+     </div>
+     <div class="item">
+       <h3>heading</h3>
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+         Consequuntur quibusdam expedita animi accusamus laborum optio.</p>
+     </div>
+     <div class="item">
+       <h3>heading</h3>
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+         Consequuntur quibusdam expedita animi accusamus laborum optio.</p>
+     </div>
+     <div class="item">
+       <h3>heading</h3>
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+         Consequuntur quibusdam expedita animi accusamus laborum optio.</p>
+     </div>
+     <div class="item">
+       <h3>heading</h3>
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+         Consequuntur quibusdam expedita animi accusamus laborum optio.</p>
+     </div>
+     <div class="item">
+       <h3>heading</h3>
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+         Consequuntur quibusdam expedita animi accusamus laborum optio.</p>
+     </div>
+
+
+
+  </div>
+  
+</body>
+</html>

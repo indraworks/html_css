@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+</head>
+<body>
+  <script>
+    //harus ada # has di web nya nah bassir mbuat utk ke child adress lication
+    //product list sbb:
+    //azamona.herokuapp.com/#/product/4jktjktr6775332rr77
+    const x = document.location.hash;
+    const checkUrl = x.split('/')
+    const hasil =checkUrl[0];
+    const hasil2 = checkUrl[1]
+    const hasil3 = checkUrl[2]
+    /*
+     langsung di web browser console:
+     location.hash.split("/")[0]
+"#"
+  location.hash.split("/")[1]
+"product"
+location.hash.split("/")[2]
+"4jktjktr6775332rr77"
+
+    */
+    console.log(checkUrl);
+    console.log(x)
+    console.log();
+    console.log(hasil2)
+    console.log(hasil3)
+  </script>
+
+</body>
+</html>

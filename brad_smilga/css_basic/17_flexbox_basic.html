@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* utk mmbuat dalam flex dislay diseting di parent/pmbungkus
+       item/child 2 
+       dlm hal ini container/
+    */
+    .container {
+      display: flex; /*dgn beri flex otomatis default horisonatl x axis */
+      flex-direction: row;
+      flex-wrap: wrap;
+       /* shorthand utk flex-direction dan flex-wrap ini 2 comand jadi 1 adaah 
+       flex-flow: row wrap
+       jadi mis nanit bikin mau coulm : flex-flow:column wrap
+       
+       */
+
+    }
+     .item {
+       background: #f4f4f4;
+       border:#ccc solid 1px;
+       padding:1rem;
+       text-align: center;
+       margin:0.75rem;
+
+     }
+     /* .item:first-child {
+       flex:1;/* yg pertama poris lebar 3 :1 dibanding item yg lain
+     } */
+  </style>
+  <title>flexbox</title>
+</head>
+<body>
+  <div class="container">
+ 
+    <!--note:utk cetak 3x .item{<h3>item $</h3>}*3-->
+    <div class="item"><h3>item 1</h3></div>
+    <div class="item"><h3>item 2</h3></div>
+    <div class="item"><h3>item 3</h3></div>
+    <div class="item"><h3>item 4</h3></div>
+    <div class="item"><h3>item 5</h3></div>
+    <div class="item"><h3>item 6</h3></div>
+    <div class="item"><h3>item 7</h3></div>
+    <div class="item"><h3>item 8</h3></div>
+    <div class="item"><h3>item 9</h3></div>
+    <div class="item"><h3>item 10</h3></div>
+    <div class="item"><h3>item 11</h3></div>
+    <div class="item"><h3>item 12</h3></div>
+    <!-- jika kita mau buat item > 16 maka kita haru sbuat warp agar utk bari sberikutnya dia
+    masih kena setting display flex pada itemnya  -->
+    <div class="item">
+      <h3>item 13</h3>
+    </div>
+    <div class="item">
+      <h3>item 14</h3>
+    </div>
+    <div class="item">
+      <h3>item 15</h3>
+    </div>
+    <div class="item">
+      <h3>item 16</h3>
+    </div>
+    <!-- settingnya adalah :flex-wrap:wrap -->
+  </div>
+
+
+</body>
+</html>
+
+<!-- Flex 
+ 1)cara atur agar display adalah flex adalah kita mendisplay parentnya
+ pembungkus dlm hal ini container diberi proerpety display = flax
+ otomtis yg di bagian items2 atau anak2 under div/contaier ini akan 
+ tersusun x ais arah horisontal uru kiri ke kanan 
+2) lfex-direction adalah steing yg kedua dimana menguatkan 
+pilihan bisa sama dng default (row) atau coulumn 
+iliha bisa reverse mis row-reverse ( uturtan dibalik)
+
+////setting anak /item  pembgaina besar kecil bidang////
+jika .item kita set flex:1 intinya adalah smua dibagi sama rata
+kalau di display:inline-blok atau blok kit abgi dgn % 
+nah kalau di item kit abisa gunakan peudo utk mpbgaian 
+.item:first-child {
+  flex:2
+}
+ ini artinya yg lainya tetap 1 ,ia saja yg 2 utk perbadigan dari bidang luas          
+
+
+-->
+
+

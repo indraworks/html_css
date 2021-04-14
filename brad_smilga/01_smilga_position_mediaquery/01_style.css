@@ -1,0 +1,46 @@
+.banner {
+  border:5px solid red;
+  padding:10px;
+}
+.banner .one {
+  float:right;
+    
+}
+.banner .two {
+  float: left;
+  height:200px;
+
+}
+
+/* clear utk buat default netral di line berikutnya */
+p {
+  clear:both;
+}
+
+
+/*
+Pejelasan arah dan program 
+kalau float ini hay abisa dilakukan kalau dia dlm container yg bungkus dia 
+biasanya gambar text setelah float maka harus dilakukan comand clear
+sbab biar dia berlaku utk sebaris row dgnya yg bawah gak teeset lagi
+disini ada buat gambar img bawah p paragraf 
+float:lef masitkan si p terangkat dia ada diseblah kanan
+float right masitkan situlisan p akan sbalh kiri 
+nah kalau ada 2 gambar left dan right si tulisan akan pasti ditegah 
+nah supaya kalau situlisan ada dibawah gak kena sama aturan float ini 
+maka p haarus lakuakn clear :both ,agar gak ekna efec dari atribute gambar
+yg flaot left dan satunya flaot right
+
+*/
+
+/*
+The float property can have one of the following values: 
+left - The element floats to the left of its container 
+right - The element floats to the right of its container
+ none - The element does not float (will be displayed just where it occurs in the text). 
+This is default inherit - The element inherits the float value of its parent 
+In its simplest use,
+the float property can be used to wrap text around images.
+
+
+*/

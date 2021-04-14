@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+
+}
+/* disni kit asetting color2 dari pagekita dalam variable
+biar lebih mudah bai utk color/background juga transiitonnya maupun
+utk space utk smua html page2 yang ada
+*/
+:root  {
+  --slantedText:"Grand Hotel",cursive;
+  --primaryColor:#698f3f;
+  --secondaryColor:#fca311;
+  --mainDark:#3a3e3b;
+  --mainWhite:#fff;
+  --mainGrey:#e5e5e5;
+  --mainTransition:all 0.3s ease-in-out;
+  --letterSpacing:0.5rem;
+}
+
+body {
+  font-family: "Catamaran",sans-serif;
+  line-height: 1.5;
+}
+/* classes/utiltiy */
+/* utility ini utk ngatur2 propertydan sring dipakai dan gakusah trus nulis ulang trus */
+a {
+  text-decoration: none;
+}
+.text-white {
+  color:var(--mainWhite);
+}
+.text-center {
+  text-align: center;
+}
+.text-primary{
+  color:var(--primaryColor);
+}
+/* end utiliy */
+/* globals */
+/* navbar */
+
+/* header */
+/* kita pake min-height agar tetap mngiis 1 layar penuh jika ada gambar
+  datang baru 
+*/
+header {
+  min-height: 100vh;
+  background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(65, 35, 35, 1)),url("./images/main-bcg.jpeg") no-repeat center/cover fixed;
+  /* catatan :
+  -header adalah parent dari class .banner utk itu supaya banner
+  bnar2 ditengah maka parent harus posisi relative 
+  -https: //www.w3schools.com/css/css3_gradients.asp
+  kalau bakcground di bikin glap caranya adalah kita pakai linear-gradien
+  dimana rgba ada 2 warna ( 1.warna grad atas,2,warna gradbawah kita pilih default atas-bawah arahnya:
+  linear-gradien(rgba(0,0,0,0.5),rgba(0,0,0,0.2)) rgba warna keempat adalah opactitynya transpanalynya
+  */
+  position: relative;
+   
+}
+
+/* end header */
+
+/* // banner //*/
+/* catatan:baner adalah tulisan yg besar di hmepage yg ada tombol
+ button utk masuk ke page2 ain ini biasaynya sprti ini 
+ dan slalu berada ditengah page
+
+*/
+.banner {
+  position: absolute; /* wajib absolute krn mmg kita mau taruh ditengah */
+  top:50%;
+  left:50%;
+  text-align: center;
+  transform:translate(-50%,-50%);/* mmg masih digeser pastikan ditengah */
+  letter-spacing: var(--letterSpacing);
+}
+
+.banner-subtitle {
+  font-family: var(--slantedText);
+  font-size:2.5rem;
+  color:var(--primaryColor);
+  /* animation */
+}
+
+.banner-title {
+  text-transform: uppercase;
+  font-size:3.2rem;
+  color:var(--mainWhite);
+  margin-top:2.5rem;
+  line-height: 1.3;;
+
+}
+
+/*end banner*/
+
+
+
+
+

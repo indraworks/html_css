@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backgrounds & Borders</title>
+  <style>
+     #box-1 {
+       /* border-width: 1px;
+       border-style: solid;
+       border-color: blanchedalmond; */
+       /*bisa disingkat 21baris sbb: */
+       border:1px solid #ff0000;
+       background-color: blanchedalmond;
+       border-radius: 15px;
+     }
+
+    #box-2 {
+      background:#333;
+      color:#fff;
+      border-top:10px solid blue;
+      border-top-left-radius: 10px;
+       border-top-right-radius: 10px;
+    }
+    #box-3 {
+     margin-bottom: 40px;
+     background-color: chartreuse;
+     background-image:url('./images/tai.jpg');
+     background-repeat:no-repeat ;
+     background-position: -50px -100px; /*ini jika gak cover 
+     maka dia kan kliatan kekanan trgantng besar gambar dan besar
+     dari box-3 yaitu contenya kan isinya paragarap 
+     kalau backgrounnya background-size:cover maka sluruh gambar tutup 
+     containernya mau pindah udah gak kiliatan 
+     supaya gak bingung container box-3 kita kasih background color :green
+     :D*/
+     height:200px;
+     width:600px;
+     
+     /* background-repeat: repeat-x; //gambarnya ke kanan ada 2 */
+     /* background-repeat: repeat-y; gmbarny aberulan gatas bawah */
+     /* defaultnya no-repeat */
+
+
+    }
+   #box-4 {
+     border:1px solid orange;
+     background: url('./images/leaf.png') no-repeat;
+     /* background-position: 150px 80px; */
+     /* background-position: center bottom; */
+     /* buat ditengah content center center */
+     background-attachment: fixed;
+     background-position:center center;
+
+     /* supaya gak pindah2 gambarnya waktu scroll */
+     
+     height:800px
+      
+
+   }
+
+  </style>
+</head>
+<body>
+  <div id="box-1">
+    <h3>box-one</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+       distinctio laborum, voluptatibus debitis quia.</p>
+  </div>
+  <div id="box-2">
+    <h3>box-two</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+       distinctio laborum, voluptatibus debitis quia.</p>
+  </div>
+  <div id="box-3">
+    <h3>box-3</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+       distinctio laborum, voluptatibus debitis quia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+       distinctio laborum, voluptatibus debitis quia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+       distinctio laborum, voluptatibus debitis quia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+       distinctio laborum, voluptatibus debitis quia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+       distinctio laborum, voluptatibus debitis quia.</p>
+      
+      
+  </div>
+  <br>
+  <div id="box-4">
+    <h3>box-4</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+       distinctio laborum, voluptatibus debitis quia.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+       distinctio laborum, voluptatibus debitis quia.</p>
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+       distinctio laborum, voluptatibus debitis quia.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+  distinctio laborum, voluptatibus debitis quia.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+  distinctio laborum, voluptatibus debitis quia.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+  distinctio laborum, voluptatibus debitis quia.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+  distinctio laborum, voluptatibus debitis quia.</p>   
+   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+  distinctio laborum, voluptatibus debitis quia.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+  distinctio laborum, voluptatibus debitis quia.</p>   
+   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+  distinctio laborum, voluptatibus debitis quia.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+  distinctio laborum, voluptatibus debitis quia.</p>   
+   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+  distinctio laborum, voluptatibus debitis quia.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+  distinctio laborum, voluptatibus debitis quia.</p>   
+   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+  distinctio laborum, voluptatibus debitis quia.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque et
+  distinctio laborum, voluptatibus debitis quia.</p>   
+  </div>
+ 
+  
+</body>
+</html>
+
+
+<!-- CATATAN Pentin gutk background  image 
+kalau *.png sebgai backround image maka di abisa transparent 
+tap kalau backgeound image *.jpg gak bisa karen adia solid gambarnya 
+penilisan backgroud-color bisa disingat dgn background 
+color adalah utk tex warna 
+-border:
+border ada 3 pnuysunnya yaitu tebalnya  warna dan jenis-typenya mis:solid,dot,dash
+      border merupakan penghias garis outline trluar dari sbuah content element
+pnulisan utk singkat border:1px #f4f4f4 solid   
+bisa 3 baris : border:
+                border-width:
+                border-color:
+                border-   
+
+catatan:background-image:url() slalu gumakan ur
+kalau mau set hehgot dan width ukuran utk tmpt image ,height: width
+kalau mau set apakah repat atau tidak gambarnya ,utk no diset 
+background-repeat:no-repeat, repat gmbarnya du frame jadi berualng2
+utk 
+background-positon : bisa di x aja yg pindah bisa sisi y yg pindah 
+defaultnya x dulu ,kiri ke jkanan ,dan y dari atas turun kebawah 
+contoh :background-posoition:100px 0  // ini kekakna sejauh 100px
+utk background position:
+https://css-tricks.com/almanac/properties/b/background-position/
+Keywords are just shortcuts for percentages. It’s easier to remember 
+and write top right than 100% 0, and that’s why keywords 
+are a thing. Here is a list of all five keywords and their equivalent values:
+
+top: 0% vertically
+right: 100% horizontally
+bottom: 100% vertically
+left: 0% horizontally
+center: 50% horizontally if horizontal isn’t already defined. 
+If it is then this is applied vertically.
+
+////PENJELASAN  BOX-4///// kita lihat beda box-3 disana kita set hegiht dan widthnyya
+nah kalau kit agak set heigh dan widthnya maka dia akan ikut content containernya
+dlm hal ini aldah panjang baris paragraf yg rbungkus div <box-4></box-4> dan jug lebarnya pasti 
+satu halaman utk itu kita hanya ikuti widthnya saja 600px agar gak sd 1 halamna 
+dan yg height scroll kbawah ikut content kita tidak set hegihtnya otomatis ikut conentnya 
+nah supaya dia ada ditengah bisa kita set position center(utk x) center( utk y dari atas)
+kalau mau dibawah kita set center bottom 9 brarti dibawah dan tengah posisinya gambar daun
+
+-->

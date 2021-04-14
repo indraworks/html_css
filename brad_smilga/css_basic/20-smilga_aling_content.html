@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+     .container {
+        height:400px;
+        height:100vh;
+        border:1px solid red;
+        display:flex;
+        flex-wrap: wrap;
+        align-content: center;
+        /* PILIHAN ALIGN CONTENT    
+            flex-start:brada keatas posisi menyisakan ruang kosong dibawah
+            flex-end :brada dbawah sisakan ruang kosong diatas
+             default/strecth:ngisi 1 halama penuh vertikal jika ada 2 baris 
+             2 baris itu berbagi vertikal isi halamn penuh
+            center:2baris ini akan ditengah utk atas dan bawah ada space kosong
+            space-around:sama dgn justify-conent (x) ada space antara item dari atas 
+              dan bawah dan sela2 antar item
+            space between :atas dan bawah/edge top-botom tidak ada space yg ada space hanya 
+             atara item dgn item lainya
+               
+        
+        */
+        align-content: space-around; 
+        align-content: space-between; 
+      }
+     .box {
+       padding:30px;
+       text-align: center;
+       font-size: 30px;
+       color:#f3f3f3;
+      
+     }
+      .box-1 {
+        background:#581f18;
+        font-size:65px;
+      }
+      .box-2{
+        background:#f0a202;
+      }
+      .box-3 {
+        background:#d95d39;
+      }
+      .box-4 {
+        background:#202c59;
+      }
+      .box-5 {
+        background:#51cb28;
+      }
+     .box-5 {
+        background:grey;
+      }
+       .generic {
+        background:#202c59;
+      }
+
+
+
+
+
+  </style>
+
+
+  <title>Align-contents</title>
+</head>
+<body>
+  <!-- parent:flex-contaner -->
+  <div class="container">
+    <!-- children flex-items -->
+    <div class="box box-1">
+      <h3>box-1</h3>
+    </div>
+    <div class="box box-2">
+      <h3>box-2</h3>
+    </div>
+    <div class="box box-3">
+      <h3>box-3</h3>
+    </div>
+    <div class="box box-4">
+      <h3>box-4</h3>
+    </div>
+    <div class="box box-5">
+      <h3>box-5</h3>
+    </div>
+    <div class="box box-6">
+      <h3>box-6</h3>
+    </div>
+    <div class="box generic">
+      <h3>box-G</h3>
+    </div>
+    <div class="box generic">
+      <h3>box-G</h3>
+    </div>
+    <div class="box generic">
+      <h3>box-G</h3>
+    </div>
+    <div class="box generic">
+      <h3>box-G</h3>
+    </div>
+    <div class="box generic">
+      <h3>box-G</h3>
+    </div>
+    <div class="box generic">
+      <h3>box-G</h3>
+    </div>
+    <div class="box generic">
+      <h3>box-G</h3>
+    </div>
+    <div class="box generic">
+      <h3>box-G</h3>
+    </div>
+    <div class="box generic">
+      <h3>box-G</h3>
+    </div>
+    <div class="box generic">
+      <h3>box-G</h3>
+    </div>
+    <div class="box generic">
+      <h3>box-G</h3>
+    </div>
+    <div class="box generic">
+      <h3>box-G</h3>
+    </div>
+  
+  </div>
+</body>
+</html>
+
+<!-- 
+  utk belajar :https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+align content adalah jika buat item2 itu lebih dari 12 box mis lebih dari satu line /baris
+maka kita akan buat tambahanya space sisa menyul dibawahnya dan kita atur juga dlm sbuah content 
+bukan baris tetap jadi satu kesatuan dan mereka baris atas yg lebih geser dan sisia mnjadi baris baru
+adalah satu kesatuan content 
+nah utk setting kelebihan dalam hal ini box-G maka digunakan flex-wrap:wrap <pilihanya>
+ -->
+
+

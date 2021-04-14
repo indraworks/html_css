@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Positioning</title>
+  <style>
+   /* ket:ada macam2 box 1..5 warna beda2 dgn width height 100px */
+   /* * {
+     box-sizing: border-box;
+     padding:0;
+     margin:0;
+   } */
+   
+   body {
+     height: 4000px;
+   }
+   
+    .box {
+      width:100px;
+      height:100px;
+    
+      
+    }
+
+     .wrapper {
+       position :relative;
+       background: #333;
+       width:500px;
+       height: 500px;
+     }
+
+   
+     #box-1 {
+       position: relative;
+       top:50px;
+       left:50px;
+       background: red;
+       z-index:1; /* dikaenakan tenggelam ktutup wrapper maka kita munculkan dgn z-index 
+       makin positif maka kdudukan layer makin diatas yg lain!
+          */
+ 
+     }
+   
+      #box-2 {
+        position :absolute;
+        top:200px;
+        left:200px;
+  
+          background: yellow;
+      }
+
+   #box-3 {
+      /* coba lihat position absolute dia ikut relative pada html page/vieport
+       bukan ikut pada wrapper yg parennya 
+       */
+      position:absolute;
+      bottom:75px;
+      right:25px;
+       background: green;
+     }
+
+      #box-4 {
+        /* biasayna utk fixed jadi gak pindh2 cocok utk navbar jadi jika dscroll dia slalu diam diatas 
+        kit acoba kasih body yg panjang heighnya 500px nanti pas scroll trlihat kotak biru tetap diam
+         */
+        background: blue; 
+        position: fixed;
+        
+       
+     }
+
+      #box-5 {
+        /* adalah posit kalau sudah scrooll ditop maka dia akan stay ditop gak gerak kemana2 
+        kalau trun dia turun tapi kalau sudah naik sampai 0 tdiop dia taka akan trus ksroll naik ! 
+        kita taruh positon ;sticky tapi harus jug ataruh top:0
+        */
+       
+
+        background: orange;
+         position:sticky;
+         top:0; 
+       
+     }
+      
+
+    /* POSITION STATIC */
+     
+        /* position: static;
+        box 1 teatap pada psisi gak aad nilai jaid gak kmana2 */
+       
+        /* kita coba pos. relative box1 pindah move positionng dari top kebawah sbasr 50px
+        dan dari kiri k kanan sbsar 30px jadi alau mau relative jharsu beri nilai prpindahanya !
+        terilnat box mereah pindah sjau h move nilayg diberikan 
+         */
+      
+
+   /* POSITION RELATIVE 
+      position: relative;
+        top:70px;
+        left:30px;
+        /* kita coba pos. relative box1 pindah move positionng dari top kebawah sbasr 50px
+        dan dari kiri k kanan sbsar 30px jadi alau mau relative jharsu beri nilai prpindahanya !
+        terilnat box mereah pindah sjau h move nilayg diberikan  ini relative direct parent!
+*/
+
+    /* POSITION ABSOLUTE  box2 & 3 kita masukin container absulute ini absolute 
+    sesuai dgn nilai yg diberikan dan ingat relative dari yg direct parent
+    bisa dilihat dari box3 ijo itu dari bttom :50px ,rgiht 100px  
+    dia muncul dari sisi kanan bawah positionya
+    
+    ////TETANG z-index ini bidan z nilai index makin positif pemenangnya makin besar 
+    berada ditumpukan paling
+    atas,contoh cotnainer kita mau kasih z-index :1 dia diatas yg merah !
+    
+    
+    
+    */
+     
+     
+
+
+    /* POSITION FIXED */
+
+    /* POSITION STICKY */
+
+
+
+
+  </style>
+
+</head>
+<body>
+ <div id="box-1" class="box"></div>
+ <!-- dibungkus wrapper yg positonnya :relative  -->
+ <div class="wrapper">
+
+   <div id="box-2" class="box"></div>
+   <div id="box-3" class="box"></div>
+
+ </div>
+ <div id="box-4" class="box"></div>
+ <div id="box-5" class="box"></div>
+
+</body>
+</html>
+
+<!-- 
+  CSS POSTIONING 
+  kit atahu utk paragraf ini kan sudah default blcok
+  kit abisa mmbuat positioning kepada mereka element yg block ini 
+ 
+ 1) Static =>
+   gak ada effect dri tblr(top,btom,left,right
+   propretirs atau valuenya) nilai default dia dia awal element tsb
+
+ 2)  Relavtive -- nilai dari tblr(top/bottom/left/rgith mnyebabkan element yg ada 
+   saat ini pindah dari normal tmpatnya dia skrg (static) berdasarkan nilai tblr yg diberikan 
+   pada element.
+
+ 3)  Absolute -posisi perpindahannya adalah relative dari parentnya si element ini
+     tapi ingat parentnya harus ada posisinya yach! kalau tidak dia ikut si box-2 box-3 dalam
+     contoh diatas kalau di ketik absoulute ikut relative sama parent body bukan parent wraper!
+     dia ikut parent wrapper jika dan hanya jika parent wrapper positon = relative!
+     kalau tidak maka sianak dari warper dl hal ini box2 dan box 3 ikut body ( parent utama!)
+
+ 4)  FIxed -posoisi perpindahan relative dari viewport.
+ (whole broser window page)
+
+ 5)  sticky - posisinya berdasarkan dari scroll 
+ contoh element menu dia discroll teap aja posisi dia lement tsb  diatas yg gerak scroll kbawah keaas 
+
+nah kit abuat masing2 box warna berbeda2 biar nnati keliatan tiap efek posiitoning yg ada
+
+
+            
+
+
+
+ -->
+
+
+ 

@@ -1,0 +1,326 @@
+/* RESET AWAL */
+
+/*
+catatan shothand utk padding /margin
+4 nilai :top-right-botom-left
+3 nilai: top  right-left  bottom   ( ingat!kalau 3 slalu right-left tengah)
+2 nilai: top-botom right-left
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* SETTING CORE  */
+html,
+body {
+  /* ingat kalau pakai awesome fotn iimport dgn link
+  diatas head kmdian baru panggil lagi namanya ,jangan lupa 
+  terahir abis koma , kasih sanserif utk default jika ada maslah sama 
+  awesomefont link!
+  */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7em;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+h1,
+h2,
+h3 {
+  /* catatan:karn kena rset * {} maka
+  kita buat judul dan kata2 besar pading botm 20px */
+  padding-bottom: 20px;
+}
+
+p {
+  /* krn sudah reset () kit abuat supya jrak top-botom
+  ada space perparagraf  */
+  margin: 10px 0;
+}
+
+/* Navbar Styling 
+kit apakai id gak pakai class sbab navbar hanya seklai dan uniq di atas
+tempatnya di page html
+*/
+
+#navbar {
+  background-color: #333;
+  overflow: auto; /*utk tulisan ada di bagian navbar */
+  color: #fff;
+}
+
+#navbar a {
+  color: #fff;
+}
+
+/* ID navabar ada 2 element h1 (utk log) dan ul utk navigasi lin
+nah yg  h1 flaot sbalh krii  dan ul float sblah kanan
+sbb:
+*/
+#navbar .logo {
+  float: left;
+  padding-top: 20px;
+}
+
+#navbar h1 {
+  float: left;
+  padding-top: 20px;
+}
+
+#navbar ul {
+  float: right;
+
+  list-style: none;
+}
+
+/*  CLASS UTILITY utk bagian Class bisa dipakai  */
+
+/* CONTAINER WRAPPER h1 dan ul agar  bisa ketenganh apanbia layar digeser
+maka kita akan buat class wapper/container  yg bungkus h1 dan ul
+
+*/
+
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+  overflow: auto;
+  padding: 0 20px;
+}
+
+.text-primary {
+  color: #f7c88a;
+}
+
+.lead {
+  font-size: 20px;
+}
+/* utk class button */
+.btn {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  background: #333;
+  padding: 13px 20px;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #f7c88a;
+  color: #333;
+}
+
+/* //////////////////END Class Utility////////////////////////// */
+
+#navbar ul li {
+  float: left;
+}
+
+#navbar ul li a {
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
+#navbar ul li a:hover,
+#navbar ul li a.current:hover {
+  background-color: #666;
+  color: #f7c08a;
+}
+
+.bg-dark {
+  background: #333;
+  color: #fff;
+}
+.bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.bg-primary {
+  color: #333;
+  background: #f7c080;
+}
+
+.clr {
+  clear: both;
+  /*ini buat clearkan float dibaris bawahnya */
+}
+.l-heading {
+  font-size: 40px;
+}
+
+/* utk atur padding scara globl/utility padding top-bottom */
+.py-1 {
+  padding: 10px 0;
+}
+.py-2 {
+  padding: 20px 0;
+}
+.py-3 {
+  padding: 30px 0;
+}
+
+/*  UTK HOVERNYA kita berada di page yg current saat ini utk itu sifat hover akan slalu sama 
+  jadi kita baut classnya saja nama current jadi gak perlu nulis lagi krn perlakuanya yg sama nanti utk 
+  page yg lain
+*/
+
+/*  Showcase styling  */
+#showcase {
+  height: 600px;
+  background: url('../img/showcase.jpg') no-repeat center center/cover;
+  /* ingaat /cover bukan coverage!sampai mati gak muncul kontol! */
+}
+
+#showcase .showcase-content {
+  color: #ffff;
+  padding-top: 140px;
+  text-align: center;
+}
+/* ///end ShowCase style//// */
+
+#showcase .showcase-content h1 {
+  font-size: 50px;
+  line-height: 1.3em;
+}
+#showcase .showcase-content .lead {
+  font-size: 18px;
+}
+
+#showcase .showcase-content p {
+  line-height: 1.8em;
+  padding-bottom: 20px;
+}
+
+/* Home Info  */
+#home-info {
+  height: 450px;
+}
+#home-info .info-img {
+  /* kita bagi 2 kontent home info 1 buat info-inmg 50% sblhakiri,buat info-content sblha kanan 50%  */
+  float: left;
+  width: 50%;
+  background: url('../img/photo-1.jpg') no-repeat center center/cover;
+  min-height: 100%;
+}
+#home-info .info-content {
+  float: right;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  padding: 50px 30px;
+  overflow: hidden;
+}
+
+#home-info .info-content p {
+  padding-bottom: 40px;
+}
+
+/* Features */
+.box {
+  float: left;
+  width: 33.3%;
+  padding: 50px;
+  text-align: center;
+}
+.box i {
+  margin-bottom: 10px;
+}
+
+/* About Info page Style */
+#about-info .info-left {
+  float: left;
+  width: 50%;
+  min-height: 100%;
+}
+#about-info .info-right {
+  float: right;
+  width: 50%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+#about-info .info-right img {
+  /* ingat utk image sllu inline supaya tenganh harus jadi block! */
+  display: block;
+  width: 70%;
+  margin: auto; /* ini supaya brada ditengah! */
+  border-radius: 50%;
+  padding: 15px;
+}
+
+/* testimonial*/
+#testimonials {
+  height: 600px;
+  background: url('../img/test-bg.jpg') no-repeat center center/cover;
+  padding-top: 40px;
+}
+
+#testimonials .testimonial {
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 40px;
+  opacity: 0.8; /*ini utk transparant  */
+  /* kalau overlay nanti akan dibahas latar blkang transparant tapi tulisan tajam */
+}
+#testimonials h2 {
+  color: #fff;
+  text-align: center;
+  padding-bottom: 40px;
+}
+/*atur testimonial image */
+#testimonials .testimonial img {
+  width: 100px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+}
+
+/* form style */
+/* #contact-form {
+  display:block;
+  width :400px;
+  background: #333;
+  color:#fff;
+  margin:0px auto;
+  margin-top:100px;
+ 
+} */
+#contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+#contact-form label {
+  margin-bottom: 5px;
+  display: block;
+}
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px #ddd solid;
+}
+
+#contact-form textarea {
+  height: 200px;
+}
+/* ubah ouutline pada saat focus supaya sama dgn texprimary */
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: #f7c08a;
+}
+
+/* end form style */
+
+#main-footer {
+  padding: 20px 0;
+  background: #444;
+  color: #fff;
+  text-align: center;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* 
+     skenarionya gini utk flex directr row
+     kit abuat center ditengah dan kita akan lakukan hal yg sama 
+     utk flex dir:coulmn bisa apa gak?
+    
+     */
+     .container {
+        height:300px;
+        height:50vh;
+        border:5px solid red;
+        display:flex;
+        justify-content: center;/*atur arah row/horisontal ditemgah */
+        align-items: center;/* atur arah Y ,utk pilihan di taruh di tengah */
+        }
+
+      .container-1 {
+     
+        height:900px;
+        border:5px solid blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* supaya x ,inipiihan agar gak kluar dia boxnya ttp ditengah di arah x */
+        align-items: center; /*atur bidang Y pilihan ditengah  */
+        
+      }
+       
+     .box {
+     
+       padding:30px;
+       text-align: center;
+       font-size: 30px;
+       color:#f3f3f3;
+      
+     }
+      .box-1 {
+        background:#581f18;
+      
+      }
+      .box-2{
+        background:#f0a202;
+      }
+      .box-3 {
+        background:#d95d39;
+      }
+      .box-4 {
+        background:#202c59;
+      }
+      .box-5 {
+        background:#51cb28;
+      }
+     .box-5 {
+        background:grey;
+      }
+     
+
+
+  </style>
+
+
+  <title>Main Axis & Cross Axis</title>
+</head>
+<body>
+  <!-- parent:flex-contaner -->
+  <div class="container">
+    <!-- children flex-items -->
+        <div class="box box-1">
+          box-1
+        </div>
+        <div class="box box-2">
+          box-2
+        </div>
+        <div class="box box-3">
+          box-3
+        </div>
+        <div class="box box-4">
+          box-4
+        </div>
+        <div class="box box-5">
+          box-5
+        </div>
+        <div class="box box-6">
+          box-6
+        </div>
+  
+  </div>
+  <div class="container-1">
+      <!-- children flex-items -->
+      <div class="box box-1">
+      box-1
+      </div>
+      <div class="box box-2">
+      box-2
+      </div>
+      <div class="box box-3">
+      box-3
+      </div>
+      <div class="box box-4">
+      box-4
+      </div>
+      <div class="box box-5">
+      box-5
+      </div>
+      <div class="box box-6">
+      box-6
+      </div>
+
+
+  </div>
+
+</body>
+</html>
+
+<!-- 
+  utk belajar :https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+Main axis dan cross axis 
+pada saa jadi flexbox row dgn justify-content maka main-axis widh arah row kiri kanan
+dan cros axis dari arah veritikal atas bawah 
+nah pada saat flexbox column ,direction column amaka main axis ata id posisi vertikal
+(posisi sblumnya cross-axis) nah cross-axisnya malah jadi horizontal 
+gambar bisa dlihat di dirr bradcatatan/mainais-crossaxis.jpg
+
+ -->
+
+

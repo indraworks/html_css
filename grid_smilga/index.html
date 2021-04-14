@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <!-- bat disini jug astylenya incase kita mau adakan prubajhan kliatan langsung 
+  utk latihan di tutorla ini kalau project smua di file css
+  -->
+  <style>
+    /* kita atur disini containernya  */
+    /*units -rows as well  */
+    /* pemaikan besaran :px rem em % auto fr    */  
+    /* 1rem 16px*/
+    .container {
+      height:100vh;
+      display:grid;
+      grid-template-columns: 1fr 1fr 2fr 1fr;
+      grid-template-rows: auto 1fr;
+
+    }
+    .cell:nth-child(3) {
+      grid-column-start: 5;
+      grid-column-end: 2;
+       background:green
+    }
+
+  </style>
+  <title>Grid Tutorial Smilga</title>
+</head>
+<body>
+  <div class="container">
+    <div class="cell cell-1">cell2</div>
+    <div class="cell cell-2">cell3</div>
+    <div class="cell cell-3">cell4</div>
+    <div class="cell cell-4">cell1</div>
+    <div class="cell cell-5">cell5</div>
+    <div class="cell">cell6</div>
+    <div class="cell">cell7</div>
+    
+    <!-- kalau nulie emet .cell{cell$}*2 kalinya diluar ya -->
+  </div>
+
+</body>s
+</html>
+
+
+
+<!-- 
+//pelajaran 1:
+
+  basic css grid : parent container di css kit aseting  2 property :grid dan grid-template
+display:grid;
+grid-template-columns: 200px 300px 
+disini kit abuat 2 kolumn grid dgn 2 rows karena kita punya 2 cell
+misalkan kit aada cell anak sbanya k 6 :
+<div class="cell">cell1</div>
+    <div class="cell">cell2</div>
+       <div class="cell">cell3</div>
+    <div class="cell">cell4</div>
+     <div class="cell">cell5</div>
+    <div class="cell">cell6</div>
+
+maka di cetak sebanyak 3 baris masing2 2 buah coulumn jadi grid sudah cerdas
+otomastis menyesuaikan misal kalau kita buat grid-template columns jadi 3 columns : 200px 300px 200px 
+maka hasilnya akan jadi 2 baris saja akan urut baris 1:cell1,cell2,cell3 ; baris4:cell1,cell5,cell6
+
+
+bagaiman jika cell kita tambah jadi 7  maka akan jadi 3 baris dgn cell7 ada dibarsi 3 sebelah kiri sprti dihasil html dijalankan (liveserber)
+
+//pelajaran 2 :
+///// kita Setup color masing2 cell ,cell1 sd cell 5,yg cell 6 7 biarin
+agarmudahkan utk belajar
+ 
+//pelajaran 3: kita kenal units ini utk mengatakan rows
+               kita jug abisa setting besar cell tsb dgn 
+               pake besar: px rem em % auto fr 
+   kebanyakana pake fr utk auto biasanya akan ikuti besaran media page kalau kcil ikut kecil dan besar ikut besar
+   jadi flexible             
+          em jarang dipakai gak pavalid !      
+
+
+
+// PELAJARAN ke 4 :PENTING BANGET :! kita kenal seting template ada 2 :
+    -grid-template-column : nilai_value_besar_width 
+        contoh: grid-template-column: 200px 2rem auto  //disini kita buat 3 coulumn
+        penjelasan :utk diatas angka valuenya adalh bsaran utk widhth nya ah yg impicit adalah tingginya
+        otomatis akan menyesuaikan jika sebelumn kita seting grid-tempalte-rows
+        jika kita pilih auto utk pilihan seting besarnan(width ) maka otomatis menyesuaikan 
+    -grid-template-rows: nilai value besar_hight
+        nah ini penting banget adan harus setting besaran hight (vh) di parent contaiernya dulu!
+        contoh : .container {
+                  height:100vh //tinggi ini akan paling besar memenuhi tinggi layar html
+
+        }
+       setelah setting ini anda boleh akan buat tinggi dari nilai rowsnya :
+         grid-template-rows: 200px,300,auto //disini kita buat 3 baris  dgb baris paling bawah auto sisanya nnti utk tingginya    
+
+     implicit mengikuti artinya contoh setingan : grid-template-columns: 200px auto 112px;
+                                                    grid-template-rows:200px 20rem auto;
+                                              terlihat colun2 besarnya auto dia akan ,,besar dan felxibel otomatis 
+                                              baris 2 kolumn2 akan ikut karena ini impicit jadi semua kolun tiap barsinya akan ikut 
+                                              auto lebarNYA!
+                        contoh kebaliknanya jia row/tingginya di column2 baris 2 kita buat auto  maka tinggi kolumn 2 akan ikut memenuhi membagi 2 layar!                                     
+grid-template-columns: 200px 70rem 112px;
+grid-template-rows:200px auto 300px;
+                          
+////Pelajaran ke-5: pembagian fraction 
+ fr unit adalah pembagian page dgn cara fractuon ini sma halnya denga percentage paling banyak dipakai 
+ boleh di aply ke grid templates column dan juga ke grid templates
+ misalnya  grid-template-columns:1fr 1fr 2fr 1fr
+  artinya membagi 4 column  dalam 1 bidang tapi coulum 3 lebarnya lebih besar 2x colun yg lain 
+
+
+-->

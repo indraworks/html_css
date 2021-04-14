@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #222;
+}
+
+/*
+
+kalau pilih anaknya dari parent (container) 
+cell-1 seelctornya adalah :first-child
+
+*/

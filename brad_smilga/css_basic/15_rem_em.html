@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REM & EM</title>
+   <style>
+     /* box-1 adalah parent 1em ~20px */
+     #box-1 {
+       font-size:20px;
+     }
+      /* p adalah anak dari wraping box-1 */
+     #box-1 {
+       font-size: 1.5em;
+       padding:1em; /* hasilnya aenh =30px yatu 20px*1.5(font bukan 1em) */
+     }
+      #box-1 ul {
+        font-size: 1.2em;
+      }
+  /* setting box-2 dgn unit rem */
+      html {
+        font-size: 1rem; /*ini akan kadi patokan sluruh halaman web 1rem~16px  */
+      }
+      #box-2 {
+        font-size: 1.5rem;
+      }
+      #box-2 p {
+        font-size: 1rem;
+        line-height: 1.7rem;
+      }
+   </style>
+
+</head>
+<body>
+  <div id="box-1">
+    <h3>BOX-1</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio provident accusantium, 
+      animi similique delectus nihil asperiores consectetur necessitatibus recusandae possimus sit 
+      corrupti
+       commodi accusamus cupiditate expedita quibusdam iure obcaecati quo.</p>
+       <!-- kalau pake em patokan utk font-zise akan dgn parentnya dikalikan jadi makin baesa
+      contoh nested ul li dibawah ini ,makanya jarag dipakai -->
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3
+             <ul>
+               <li>1</li>
+               <li>2</li>
+               <li>3</li>
+             </ul>
+
+        </li>
+      </ul>
+
+
+  </div>
+   <div id="box-2">
+    <h3>BOX-2</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio provident accusantium, 
+      animi similique delectus nihil asperiores consectetur necessitatibus recusandae possimus sit 
+      corrupti<span> hello kity</span>
+       commodi accusamus cupiditate expedita quibusdam iure obcaecati quo.</p>
+       
+  </div>
+</body>
+</html>
+
+
+
+<!-- 
+utk EM singkatnya tak perlu di pakai jarang sebab dia relative thd parentnya 
+diterangkan sbb:
+kalau kita ctrl+alt+l+o kita akan ceck pada inspec html sorot style
+kita sorot p ,paragraph> maka display :default dan font-size:1em  ini ~16px
+ini defaultnya 
+nah utk h3 coba kita sorot maka hasilnya adalah font-size:1.17em dari mana hasilnya 
+yaitu dari 16px ( standard root * 1.17) =18.72px;
+1em setara deng 20px;
+yg jadi masalah di em adalah kalau dia nested pasti anaknya /child element dari parent punya
+ukuran font-size lebih besar dari relative parent ny yg sekranga contoh:
+contoh #box-1 kita set fon-size: 20px;
+kmdian utk <p>nya kita set 1.5em  maka  font-size semua paragraf hurfnya jadi 30px ( krn pbrdasarkan dari parent
+  acuanya 30px) bukan dari root 16px*1.5 =24px;
+
+  skrng kita coba buat <ul>
+                          <li> test
+                                 <ul>
+                                  <li> 
+                                    test2
+                                  </li> 
+                                 <ul>   
+                          </li>
+                        </ul>
+  fontsise ul yg dikalang bawah adalah hasil perkalian dari fontsize
+  kalang atasnya makanya menjadi besar
+   makanya kita jarang pake em membinungkkan
+
+ REM unitnya tetap yatu di root html *[
+ font-size:16px;utk rem dia patokan dari root bukan relative dari parent
+ atas sbuah element /tag html!
+
+///REM ///smua flat patokan adalah root html font-size :16px ~1rem
+kalau mau ubah kit abuat di css tag html dan ubah ukuran font-sizenya sbb:
+ html {
+   font-size:10px; maka 1rem terset sbgai 10px yg asliya dari 16px maka patokan akan brubah !
+ }
+
+ -->

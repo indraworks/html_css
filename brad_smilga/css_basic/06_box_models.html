@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model</title>
+  <style>
+    * {
+      margin:0px;
+      padding:0px;
+      box-sizing: border-box;
+   }
+    
+   /*#box-1,#box-2 {
+      border:1px black solid;
+      padding:30px;
+      background-color: #f4f4f4;
+    } 
+    note dari pada buat id box1 box 2 krn mau buat sama 
+    gak beda gak spesifik maka kita sbaiknya buat pake class
+    sbab class ukt mproprty elemnt lebih dari satu gak unik
+    klo uniq pake #id
+    */
+   .box {
+     border:1px red solid;
+     /* padding all side */
+     /* padding:40px; */
+     /* padding per-side persisi jika mau autur persisi sbb:(berrutan searah jarum jam) */
+      padding-top: 10px;
+      padding-right:20px;
+      padding-bottom:10px ;
+      padding-left: 20px;
+      /* shorthand top/bottom right/left are same */
+      /* padding jika top/bottom sama nilai,dan right-left sama nilainya */
+      padding:10px 20px;
+
+      /*shorthand jika 3 nilai top right/left  bottom*/
+      
+      
+
+
+     /* margin all side */
+     margin:20px;
+     /*margin perside */
+      margin-top: 10px;
+      margin-right:20px;
+      margin-bottom:10px ;
+      margin-left: 20px;
+     /* shorhand margin perside top/botom right/left (2nilai) */
+     /* shorhand margin perside top right/left bottom (2nilai) */
+
+
+     background-color: darkcyan;
+     width:500px
+   }
+   
+   /* kit amau buat padding 200px maka pasti akan brubah itu kotak
+    box makin besar nilainya bukan 500px besar kotak skrg jadi 500px+200px
+    supaya gak jadi sprti ini ttp widthnya 500px biar lebar kdalam dan desak contentnya
+    maka kit aseting dibagian reset * {box-sizing:border-box}*/
+
+  </style>
+</head>
+<body>
+  <div class='box'>
+    <h3>box one</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque at aliquid 
+      doloremque eos nam inventore, accusantium cum aperiam vero quo.</p>
+  </div>
+   <div class='box'>
+    <h3>box one</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque at aliquid 
+      doloremque eos nam inventore, accusantium cum aperiam vero quo.</p>
+  </div>
+
+</body>
+</html>
+
+
+<!-- BOX MODEL Plaing Penting ari smua HTML/CSS asal mulanya!
+nah begini permirsa jadi waktu anda bikin div sbuah container
+dan stlahnya mmbuat content didalam div tesb maka otomatis broser langsung 
+mengenali bahwa anda sedang mendisplay sbuah box model,di css atau penatuan tampilanya!
+kurang lebih begini
+div {
+display:box
+}
+nah apa maksudnya maksudnya adalah kontent yg ada dibuat didalam div itu maka
+akan terdiri dari :
+paling dalam kluar trbungkus kotak ya => content|padding|border|margin 
+nah padding ini adalah batas dari tepi garis kotak tsb ,nah jaraknya default sudah 8px
+nah yg garis tadi itu kita namain /defaulnya oleh broser html disebut border atau outline
+nah stlah dari kotak ini dia bikin jarak dgn kotak yg lain otomatis 
+nanti jika ada div lain yg dibuat namanya margin jarak atanra satu kotak dgn kotak lain / div dgn div yg lain
+nah karena sudah langsung seprti itu waktu pertaman kali sudah ada jarak margin
+sbnatar jadi jika anda mau lihat bisa di inspek sorot tanda panahnya 
+nah di bagian sisi kanan panel ada compute coba klik akan ada gambar kota 
+box lengkap dgn ukuran jaraknya ..
+jadi pada contoh diatas anda akan lihat ada :
+<div>container didalamnya ada <h3>content<h3> dan <p>content<p>
+  nah ini <h3>content</h3> dgn <p>ontent></p> ada otomatis margin sbasar 16px
+  nah dan masing2 jug a ada border outline ini 0px dan ada juga padding jarak 
+  antara content dgn outline /garis luar tadi dibuat 0px
+  nah utk buat supaya reset kita bisa dgn setting
+  * {
+    margin:0px,
+    padding:0px
+  }
+  ini biasanya setting awal utk reset smua
+  nah skrg gini coba kita set padding di h3 box1  atau p box 1 
+  kita set 20 px kit abesarkan lagi 100px maka kota akan semakin melebar 
+  nah supaya dia gak melebar keluar kita bisa reset bahwa dia itu besar kotak 
+  box sudah ditentukan dan nanti dia akan melebar kedalam saja 
+  content smakin kecil karena mmbesa rkedalam padding nah caranya adalah 
+  dgn setting :
+   box-sizing :border-box;
+
+   tentang margin,
+   nah kalau mau buat margin pemisah antar class buatnya di bagian box
+   tapi klau mau buat pemisah antara h3 dgn p
+   maka cukup salah satu saja utk total jarak pemisahnya
+   caranya sebut element container dulu baru element anak 
+   contoh .box h3 {
+     margin :2px
+   }
+
+
+
+
+
+
+
+
+-->

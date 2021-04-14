@@ -1,0 +1,160 @@
+.flexbox-container {
+  /* height: 1000px; kalau mau liat efek align-cntent pasang tinggi dulu */
+  display: flex;
+  /* flex-wrap: wrap; */
+  background-color: yellow;
+  /* justify-content: space-around;
+  /* align-items: stretch; wajib dicoba satu satu */
+  /* align-items: center; */
+  /*align-content: space-between; */
+}
+.flexbox-item {
+  width: 200px;
+  margin: 10px;
+  border: 3px solid #333;
+  background-color: #dfdfdf;
+}
+
+.flexbox-item-1 {
+  min-height: 100px;
+  flex-grow: 3;
+}
+.flexbox-item-2 {
+  min-height: 200px;
+  flex-grow: 1;
+}
+.flexbox-item-3 {
+  min-height: 300px;
+  flex-grow: 0;
+}
+/* .flexbox-item-4 {
+  min-height: 300px;
+}
+.flexbox-item-5 {
+  min-height: 300px;
+} */
+
+/*
+pertama kit abuat 3 kota  ini masing2 beda tinggi dgn lewar sama 
+nah kit abuat flex display pada container maka akan sama nah 
+
+       |  (cross axis)
+ _ ___ |_ _ _ __ _ _ _ {line axis)
+       |
+nah kalau kita kasih  justify-conttent  berati kita mau atur dia dari linex axis kiri dan kanan
+dibagi 2 direction kalau row axis brati ini horisonal line -->justify-content
+                         cross axis brarti utk direction column ,algn-items
+ linex axis/horisotal:(kiaikana) lihat gambar grafik  + diatas
+ justify-content aturan :flex-start bearti dia mulai start sbalah kiri line axis trus kekanan
+                        : center smua flexbox-item ditempatkan di tengah line axis
+                        :space-betwen ada 3 buah masig2 ada space tapi line-axis ujung kiri dan unjung kana
+                          masing2 trisi object box-item dan utk selang seling diatanrannya ada space misah
+                        :space-around : masing2 berada di line axis dgn jarak2 yg sama
+                         (ujung kiri-kana line axis ada jarak )
+                         width/lebar area kosong ujung-kiri kana spacenya 1/2 kali dari space kosong diatanra flexbox yg ada 
+jad sklai lagi kalau kita mau buat tatanan composisi sejajar dgn line axis
+maka apengaturan dgn justify-content.
+
+
+utk pengaturan yg sejajar dgn garis cross-axis :veritkan maka pakai align-items
+contoh :align-items:
+   https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+   align-items macamnya flex-start;start dari paling atas vertical,jdi smua box start dari awal psosi container y=0
+                        flex-end:start daro bawah dari y palig bawah y=max dari container
+                           asllinya utk align-items ini defaultnya :strecth
+                            yaitu smua tinggi box-iyem samadgn tinggi container
+                        strecth:defaultalignt item atur smua box sama tinggi dgn container
+                        ceneter dan baselne  nerada di garis kaltulistiwa tingginya 
+                        tapi bedanya kalau baseline nuurt berdasar tulisan yg ada di box 
+                        item.
+                        utk contoh baseline patokoan pada tulisan kotak boxitem-2
+                        krn dicari avaeragenya 
+
+                        -center :utk vertikal, smua ditengah patokanya tanpa liat tulisan didalam box-item
+
+
+utk align-content:pengaturan multiline 
+                 jadi berlaku jika flex-flow: wrap;
+           jadi pengaturan ktika item2 dalam container kelebihan maka 
+           dia akan mengisi dibawah dgn otomatis
+           nah setelahnya baru diatur dengan 
+           align-content
+           tanpa hal diatas maka align-contenct gak berlaku:
+           hadi mesti disi set flex-wrap:wrap; atau flex-flow:wrap      
+
+           bahab acuan dari css-tricks.com:
+           This aligns a flex container’s lines within when 
+           there is extra space in the cross-axis, similar to 
+           how justify-content 
+           aligns individual items within the main-axis.
+       
+          jadi ittem axis dan item cros axis terbungkus dlm item-packed
+          terwraping mereka dan 
+          ada pilihan ,
+          jadi mrka item trwarp meisalkan kalau bidang di kecilkan 
+          widh dari desktor ke ipad akan tommatis mengisi dibawahnya
+          aling-contenct:flex-start --> trwarap dari atas
+                         flex-end -->trawrap dari bawah
+                         center -->wraping ditengah atas bawah ada space
+                         strecth -->rata sorunding atas bawah terisi
+                         space-betwen :ini vertical pling atas ada bo paling bawah ada
+                                       box tengah2 ada space
+                         space arround :ini ada space palign atas pling bawah yg 1/2
+                                        kali lebh kecil dari space antar box 
+       
+///Flex Grow /////
+kita mengenal fle-grow adaalh itme object box akan membesar mekana bidang space yg ksosong
+jika directio-colum dia akan makan bidang vrtikal yg ksong 
+jik adirectopn-row dia akan maekana bidang hotiontal yg ksong
+mmbesar ngikuti besar layar atau tingi layar 
+nilai flex-grow disesuaikan terhaadp teman2 box tetangganya 
+misal box-item1,box-item2,box-item3
+
+contoh :box-1 {
+  flex-grow:2
+}
+
+box-2 {
+  flex-grow:1
+}
+box-3 {
+  flex-grow:0
+}
+maka diakan lebih besar/lebarnya 2x dari box-2 & box-3 ktika kita geser layar makin besar shingga
+nnati gak ada space kosong ,
+box-2 dia hany asperauhnya lebar box-1 yg akan mengociped space kosong 
+
+box3-3 gak akan pernah berubah  slamanya 
+karna nilainya 0 statis
+coba praktekan!
+kesimplan jadi flex-grow itu brlaku jika ada box atau item didalam kontainer sesuai 
+disesuaikan dgn dirinya misalkan dipasang 6 maka dia akan 6 kali lebh besar coupied habiskan
+lahan ksong di layar ktika lebar maks perbandinga dgn teman2 yg lainya 
+palign minimal kalau cuman 1 flexbox jika mau flex-grow =1,itu minim dia sndri artinya 
+kalau layar dilebarkan dia akan isi smua lahan kosong
+
+///Flex-shrink////
+ flex shring itu defaultnya 1 yaitu dia bisa menjadi kecil dan sempit jika 
+ layar di perkecil/sempit maka box-item akan iikut mengecil
+
+ utk flex-grow default nya 0 dia kalau mmbesar tidak ocupied 
+
+ flex basis adalah kita menetapkan minuan luasan lebar dari box2 item yg ada
+ mis 500px kit apunya 3 box
+ masing2 kita buat min 500px maka sisas 500px ( space kosong sblah kanan) jika lebar dari desktop  layar 2000px
+
+
+nah kalau kit amau tulis urutannya jadi kalau kita mau tulis penyingkatanya 
+catatan kalau mau buat model yg flexbasis maka jgn gunakan margin atau padding  x kiri kanan
+sbb akan keprong atau kemakan keambil sisi widthnyyta 
+contoh setingan yg tadi disbut diatas
+box1 { flex:2 0 300px  } ; box2 {1 1 300px }; box3{0 0 300px}
+
+disini jika kita liat maka box1 akan ocupiean lebar 2x dari box2 jika lebar layar max 
+kalau dikcilkan box 2 akan lebar ttp 300px krn shring dimaitkan  ,kalaidikciklan box2 akan 
+mnjadi min suai layar krn shring=1 nah kalau box 3 dia akan slalu tetap 300px kalau dbsar kcilkan 
+krn shring =0
+
+
+*/

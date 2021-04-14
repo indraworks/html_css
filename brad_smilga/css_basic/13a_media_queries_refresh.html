@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Queries Refresh</title>
+ <style>
+   /* ini refreshing ya uda h lama ulang lagi baru ke responsive */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:gray;
+      color:white;
+      text-align: center;
+      padding-top:100px;
+    }
+    /* kta mau atur deng media wuery backgorud dan munculkan h1 
+      kit apakai max-woidth mis max-witdth 500 artinya jika dibawah <-500
+      maka style affect sma media itu diatasnya >500 maka sudah tidak affect
+      beda sama min-width artinya start dari nilai tiu keastas maka afected
+      kalau kurang dari min-width maka style  gak affeced thd media itu 
+    
+
+    */
+    /*smart phone*/
+
+     h1 {
+       display:none;
+     }
+
+    @media(max-width:500px) {
+      body {
+        background:red;
+
+      }
+      #smartphone h1 {
+        display: block;
+      }
+    }
+    /*tablet  afffect di ukuran 501 <= x <=768 px  */
+    @media(min-width:501px) and (max-width:768px) {
+      body {
+        background:blue;
+      }
+            
+
+     #tablet h1 {
+       display:block;
+     }
+
+    }
+   
+
+    /*normal*/
+     @media(min-width:769px) and  (max-width:1200px ) {
+      body {
+         background:yellow;
+      }
+      
+
+     #normal h1 {
+       display:block;
+     }
+
+    }
+
+
+    /*wide-screen*/
+     @media(min-width:1201px) {
+       body {
+          background:brown;
+       }
+     
+
+     #widescreen h1 {
+       display:block;
+     }
+
+    }
+
+
+    /*landscape
+    utk lanscape patokannya max-height tinggi handphone
+    kalo dia 500px berarti start affect style utk atur 
+    style lanscape ingat dia hanya pengaruh sama height!
+    
+    */
+     @media(max-height:500px) {
+       body {
+         background:orange;
+       }
+       #landscape h1 {
+         display:block;
+       }
+     }
+   
+
+
+
+ </style>
+</head>
+<body>
+  
+  <div id="widescreen"><h1>Widescreen</h1></div>
+  <div id="normal"><h1>Normal</h1></div>
+  <div id="tablet"><h1>Tablet</h1></div>
+  <div id="smartphone"><h1>SmarthPhone</h1></div>
+  <div id="landscape"><h1>landscape</h1></div>
+</body>
+</html>

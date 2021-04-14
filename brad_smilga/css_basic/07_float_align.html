@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float align</title>
+  <style>
+    * {
+      box-sizing:border-box;
+    }
+     .container {
+       max-width:900px;
+       margin:30px auto;
+     }
+    body {
+      line-height: 1.4em;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .clr {
+      clear:both;
+    }
+    .box {
+      border:1px solid #333;
+      background: #f4f4f4;
+      padding:20px;
+      margin-bottom: 15px;
+    }
+    #box-2 {
+      /* sisakan 2persent utk margin biar ada rongga */
+     width:68%;
+     float:left;
+    }
+    #box-3 {
+    width:30%;
+    float:right;
+}
+  #box-4 {
+    width:24%;
+    float:left;
+    margin-right: 5px;
+  }
+     #box-5 {
+    width:24%;
+    float:left;
+    margin-right: 5px;
+  }
+   #box-6 {
+    width:24%;
+    float:left;
+    margin-right: 5px;
+
+  }
+  
+   #box-7 {
+    width:24%;
+    float:left;
+  
+  }
+  /* 4,5,6,7 biar ada pemisah kita buat gak mepet 25%  */
+   .wrap {
+     padding:15px;
+     max-width:860px;
+     margin:0px auto;
+   }
+
+  </style>
+</head>
+<body>
+  <!-- div class wrapper atau div containernya -->
+  <div class="container">
+
+    <div class="box" id="box-1">
+      <h3>Box-One</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut ducimus dolore voluptatum porro
+         fugit est similique asperiores aperiam laboriosam dolorum.</p>
+    </div>
+    <div class="box" id="box-2">
+      <h3>Box-Two</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut ducimus dolore voluptatum porro
+         fugit est similique asperiores aperiam laboriosam dolorum.</p>
+    </div>
+    <div class="box" id="box-3">
+      <h3>Box-Three</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut ducimus dolore voluptatum porro
+         fugit est similique asperiores aperiam laboriosam dolorum.</p>
+    </div>
+    <div class="clr">
+      </div>
+     <div class="wrap">
+     
+        <div class="box" id="box-4">
+          <h3>Box-Four</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut ducimus dolore voluptatum porro
+            fugit est similique asperiores aperiam laboriosam dolorum.</p>
+        </div>
+         <div class="box" id="box-5">
+                <h3>Box-five</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut ducimus dolore voluptatum porro
+                  fugit est similique asperiores aperiam laboriosam dolorum.</p>
+         </div>
+        <div class="box" id="box-6">
+          <h3>Box-Six</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut ducimus dolore voluptatum porro
+            fugit est similique asperiores aperiam laboriosam dolorum.</p>
+        </div>
+        <div class="box" id="box-7">
+          <h3>Box-Seven</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut ducimus dolore voluptatum porro
+            fugit est similique asperiores aperiam laboriosam dolorum.</p>
+        </div>
+     </div>
+   
+   
+
+  </div>
+</body>
+</html>
+
+<!-- FLoat Alignment
+dlu sblum ada flexbox atau sblum ada grid maka pemiliha kita kalau mau
+atur posui sbuah #id dan .class dalam html itu dgn display:block
+dan memang ecara otomatis <div> itu sbgai container yg autr di dalamnya /anak2 contenctya
+itu smua berupa block
+nah skrg kit aknal float ini utk atur kiri dan kananya nah utk autr anak2 didalamnya smua 
+harus dibungkus dgn contaier jdi kita bernama class coitanienr <div>
+  bunkugsin div #id .class dibawahnya ,jadi diwrapper ,sbgarag bolehny
+  namanya nama div class boleh wrapper atau cotainer yg menjuk pada yg akan kita lakuakn 
+  yaitu mmbungkus anak2 div id class dibawahnya dlm satu halaman
+dgn jalan ii kita akan bisa pindahkan ketengah yaitu dg beri margin auto 
+ki tabuaywidhya dulu sebarang klo disorot pnajang 1251px kita  coba 900pxsaja
+
+conba skrgn sorot bagian div container trlihat ksuluruhan liat pada
+bagian computed sblah kanan stlah margin auto otomatis dibuat kiri kanan sama oleh browser
+175..px
+kalau mau autr top/bomnya 30px kebawah maka autrnya =
+margin:30px auto;
+(coba klik  bagian div class container pada bag comput di inspex akan trliha tbrubah 
+margin gmbar kotakya ada ruang sbas 30px dari atas kebawah /bawah-atas
+
+////-max-width :///
+kit ada mslh issue dgn width yaitu kalau kita buat jadi mobile view maka gka akan brubah dan kita harus 
+scroll utk atur supaya bisa sprti mobile-view maka kit aharus buat maximum width kita
+yaitu bahwa pngaturan lebar kita paling max dari yg ukuran kcil nah sblumnya kita buat
+width:900px nah skrg mkita buat ini paling max dgn max-width:900px
+
+////float alignment /////////
+jadi gini kita kenal float alignment adalah utk atur eleemnt2 object
+di html kita secara horisontal kalau skrg kita bisa bagi 4 bagi 12 speti 
+grid atau flexboox ( bootstrap) tpi jaman dulu pake float aturnya
+stalh atur kmudian dibawah direset supaya bisa atur barus baru agi ssuai dgn pengaturan yg
+baru tidak ikut atasnya.
+dan jangan lupa kalau kita align dia akan berkembang gak ngisi width container
+berubah oleh itu kita mesti stup sprtti pljaran sblumnya 
+* {
+  box-sizing:border-box //ukuran box tertap widthnya 900px 
+}
+janga lupa buat class clr atau clear 
+.clr {
+  clear:both dibawah (box2 &box3) box2 dan box3 dibuat 1 line maka clear ini dibawah box 3
+
+////cara ngatur float gimana?? /////
+karena float ngaturnya utk line baris maka ada 4 kemngkinan
+bisa dilihat di w3schools 
+left,rigth,none,inherit
+bisa dgn px atau dengan persentage kan max width 900px sudah dibuat 
+nah box2 kita mau buat 70%(sblah kiri)
+ box 3 disampingnya 20% (sblah kana)
+maka kita buat skrgn
+#box-2 {
+  float:70%
+  float:left
+}
+#box-2 {
+  float:30%
+  float:right
+}
+
+//diatas kita bisa liat dgn adanya clear :both maka 
+akan reset tidak ada pengaturan dibawah div box 3 ikut sama sprti box2 dan box3
+jadi kmbali sprti smula 
+shinga kita bisa atur2 contoh kita mau atur 4 box s
+sbsar 25% 4,5,6,7 4 box ini satu baris gimana??
+
+
+}
+
+
+
+-->

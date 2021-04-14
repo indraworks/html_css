@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Queries</title>
+  <link rel="stylesheet" media="screen and (max-width:768px)" href="./css/media_queries.css">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: grey;
+      text-align: center;
+      padding-top: 100px;
+      color: #fff;
+    }
+     /* displaynya dibuat off hanya muncul per-screen media */
+     h1 {
+       display:none;
+     }
+
+
+    /* utk smua  smartphone max 500px  lebar layer/layoutnya */
+    /* Smartphones  jadi mulai 0px sd 500px masih seting css utk smartphone
+     diatasnya 501px maka akan brubah /gak efect lagi seting css utk smartphonenya
+    */
+     @media(max-width: 500px) {
+        body {
+          background: red;
+        }
+        #smartphone h1 {
+          display: block;
+        }
+     }
+     /* keblaikannya kalau min-width:500px mulai dari 500px sd widescreen maka
+        settingan cssnya ttap layarnya merah sbb:
+        kalau kurang < 500px maka tidak effect lagi!
+     */
+      /* @media(min-width: 500px) {
+        body {
+          background: red;
+        }
+     } */
+     /* /////////////TABLET /////////////// */
+    
+      @media (min-width: 501px) and (max-width: 768px) {
+        body {
+          background: blue ;
+        }
+        #tablet h1 {
+          display: block;
+        }
+     }
+
+       /* /////////////NORMAL  /////////////// */
+    
+      @media (min-width: 769px) and (max-width: 1200px) {
+        body {
+          background: green;
+        }
+        #normal h1 {
+          display: block;
+        }
+     }
+
+        /* /////////////WIDESCREEN  /////////////// */
+    
+      @media(min-width: 1201px) {
+        body {
+          background :grey;
+        }
+        #widescreen h1 {
+          display: block;
+        }
+     }
+
+       /* /////////////landscape (jika diputar non potrait)/////////////// */
+    
+      @media(max-height: 500px) {
+        body {
+          background:orange;
+        }
+        #smartphone h1 {
+          display: block;
+        }
+     }
+  </style>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+   <div id="widescreen"><h1>Widescreen </h1></div>
+    <div id="normal"><h1>Normal </h1></div>
+     <div id="tablet"><h1>Tablet </h1></div>
+      <div id="smartphone"><h1>Smartphone </h1></div>
+       <div id="landscape"><h1>Landscape </h1></div>
+</body>
+</html>
+
+
+<!-- ///////////////RESPONSIVE DESIGN ADALAH :
+  adaptaiton dari laytout jika layout ada di media handpone,ipad,laptop, desktop
+  ada poitn penting seting yatu :
+  "min-width": jika ukuran media lbih kcil dari seting min-width maka layout akan affected berubah 
+  setting cssnya trgantng dari setingnan dicss
+  kalau media > angka min-width : maka gak akan effect csnya th media iut
+    The min-width property defines the minimum width of an element.
+
+     If the content is smaller than the minimum width, the minimum width will be applied.
+
+     If the content is larger than the minimum width, the min-width property has no effect.
+
+  max-width : (kebalikan dari min-width)
+    kalau contenctnya media  lebih besar dari max-width maka dia gak ada effect ,
+    tapi jika dia lebih kecil maka dia masih dalam affect css yg diset di max-withd tsb
+
+ -->
+
+
+<!-- PENGATURAN CSS  layout DARI FILE  CSS jadi file tsb dari css akan dibuka
+  JIKA DAN hANYA JIKA MISALKAN idscreen saat ini /itu adalah max 768 apakah saat iut kontent
+  dibuka di tablet atau smartphone jika masih dibawah tablet /smartpone ukuran layout pxnya 
+  maka file tsb dibuka other wise tidak 
+  dalam hal ini dicontohkan fiel moble.css isi:
+  body {
+    background:pink 
+  }
+jika slama <=768px (tablet/smartphone) maka layout akan brwarna background pink !
+cara pada link tambakan media="screen and (max-width:768px)" href=./css/mobile.css
+
+
+ -->
+
+
+
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    div {
+      display:inline-block;
+      width:150px;
+      height:150px;
+    }
+
+    div:hover {
+      /* tulis apanya yg brubah jika di hover?asnwer:backgroud */
+       background:orange;
+    }
+    .one {
+      background:red;
+          
+    }
+    .two {
+      background:blue;
+        
+    }
+    .three {
+      background:green;
+      /* property yg ditransition apa? buat daftarnya*/
+      transition-property:background;
+      transition-duration: 2s;
+      
+      }
+    /* 
+    transition ada macamnya 3 yg pengaruhi dirinya:  
+    -transition propertynya
+    -transition :change overtime  
+    -transition:duration
+
+    
+    */
+
+    /* transition adalah melakukan prubahan transiti dari porperti
+      yang akan kita kenai perbuatan transisi kita nati ini ada pilihanya 
+      apakah bacgroundnya ?apapakah border-linenya yg akan ditrnsisi
+      berapa lama transisi berlangsung?
+      nah itu diaturr
+      contoh disini biaa kita lakukan hove sama class one,two tre brubah warna
+      nah yg three kita buat trasnisi lambat
+    
+    */
+  
+      
+    
+  </style>
+  <title>transition property</title>
+</head>
+<body>
+  <div class="one"></div>
+  <div class="two"></div>
+  <div class="three"></div>
+  
+</body>
+</html>

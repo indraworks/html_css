@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    div {
+      display:inline-block;
+      width:150px;
+      height:150px;
+    }
+
+    div:hover {
+      /* tulis apanya yg brubah jika di hover?asnwer:backgroud */
+       background:orange;
+    }
+    .one {
+      background:red;
+          
+    }
+    .two {
+      background:blue;
+        
+    }
+
+ .three {
+      background:green;
+      /* property yg ditransition apa? buat daftarnya*/
+      transition-property:background,border-radius;
+      transition-duration:4s 5s; 
+      
+      
+      }
+ .three:hover {
+        border-radius:50%;
+      }    
+
+/* kita mau hover border raidus sbsar 30pesern waktu blik ksmula 1s */
+
+    /* 
+    transition ada macamnya 3 yg pengaruhi dirinya:  
+    -transition propertynya
+    -transition :change overtime  
+    -transition:duration
+
+    
+    */
+
+    /* transition adalah melakukan prubahan transiti dari porperti
+      yang akan kita kenai perbuatan transisi kita nati ini ada pilihanya 
+      apakah bacgroundnya ?apapakah border-linenya yg akan ditrnsisi
+      berapa lama transisi berlangsung?
+      nah itu diaturr
+      contoh disini biaa kita lakukan hove sama class one,two tre brubah warna
+      nah yg three kita buat trasnisi lambat
+    
+    */
+    /*
+     multiple transiiton artinya adalah: melakukan lebih dari 1 traisiton
+     dan proterty  yg mau di transtion >1 
+     disini kit acona tambahkan transiton -property border-radius stl
+     utk durasi biasanya yg pertama urut utk property1,stlah koma utk property kedua
+     transtion-durations:2s,1s <--yg 1st utk yg border-radius property
+
+    */
+  /*
+   delay digunakan utk supaya porperty diam dlu sblmum balik kesmua stlah transisi dilaksanaka
+   contoh transisi kotak jadi bundar border-raidus 50% ,stlah jadi bundar nungu dulu 2s utk blik 
+   ini namayanya yg disebut dgn delay
+
+  */
+      
+    
+  </style>
+  <title>transition property</title>
+</head>
+<body>
+  <div class="one"></div>
+  <div class="two"></div>
+  <div class="three"></div>
+  
+</body>
+</html>

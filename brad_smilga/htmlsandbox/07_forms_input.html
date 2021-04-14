@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms & Input</title>
+</head>
+<body>
+  <form action="process.php">
+  <!-- text -->
+  <div>
+    <label for="name"><strong>name :</strong></label><br>
+    <input type="text " id="name" name="name" value="Jhon Doe">
+
+  </div>
+   <!-- text -->
+   <div>
+
+     <label for="email"><strong>email :</strong></label><br>
+     <input type="email" name="email" id="email" placeholder="please fill email">
+
+   </div>  
+    <!-- text area -->
+  <div>
+
+    <label for="message"><strong>message:</strong></label><br>
+    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+  </div>
+  <!-- select -->
+  <div>
+    <label for="sex">Sex :</label><br>
+    <select name="sex" id="sex">
+      <option value="male">male</option>
+      <option value="female" selected>female</option>
+      <option value="others">others</option>
+    </select>
+  </div>
+  <!-- number -->
+  <div>
+   <label for="age">Age</label><br>
+   <input type="number" name="age" id="age">
+    
+  </div>
+  <!-- date-->
+   <div>
+     <label for="birthdate">BirthDate</label><br>
+     <input type="date" name="birthdate" id="birthdate">
+   </div>
+   <!-- number -->
+    <div>
+    <label for="membership">membership</label>
+    <input type="radio" name="membership" id="membership" value="simple">simple
+    <input type="radio" name="membership" id="membership" value="standard" checked>standard
+    <input type="radio" name="membership" id="membership" value="gold">gold
+
+    </div>
+    <!-- checkbox -->
+    <div>
+      <label for="likes">i Like ..</label>
+      <input type="checkbox" name="likes" id="likes" value="bike">bike
+      <input type="checkbox" name="likes" id="likes" value="car" checked>car
+      <input type="checkbox" name="likes" id="likes" value="boat">boat
+
+    </div>
+    <!-- input submit -->
+    <input type="submit" value="Submit">
+    <!-- button submit -->
+      <!-- <button type="submit">Submit</button> -->
+    
+    <!--button reset  -->
+    <button type="reset">Reset</button>
+  </form>
+</body>
+</html>
+
+
+
+<!--FORM and Inputs 
+yang perlu diingat adalah utk label for maka id dari input harus sama jadi 
+mis nama fornya "name " maka id dari input harus name juga 
+sbgb kitka disoro t amak akan aktif disitu cursornya 
+dan perlu diketahui utk name di inputitu yg diambil nilainya dibaca oleh server
+jadi form ini adalah tampilan utk user client isi nilai slnjutnya diolah ileh server! 
+form bersii action nah biasanya berisi file js utk laksankan action ini ke server
+bisa php juga 
+
+kalau mau pakai snipet utk input tinggal ketik input: enter otomatis 
+utk textArea bisa kita buat cols adalah nilai lebarbya dan rows adalah tinggi/barisnya
+kita gunakan div agar menjadi block itu barisnya jadi lebih rapi ada rengang jarak atas dan bawahnya baris 
+jik apakae div
+
+UTK Criteria pilihan yaitu dgn tag <select> dan didalamnya ada <option>
+
+
+Note :kita bisa mmberi nilai default pada tag dan mngisinya 
+misalkan pada input type radio button a/select ->kita tulis "selected" tinggal beri tulisan 
+checked di tag seblah kri sblum pnutup >  utk inut text kita bisa isi 
+hard value namanya yaiut di name value- johon doe
+
+-->
+
+
+<!-- UNTK TAHU MANA ELEMENET YG INLINE DAN BLOCK 
+ source bisa disini :
+ https://www.w3schools.com/html/html_blocks.asp
+
+ TENTANG DIV ELEMENT :utk buat tag jadi sbuah blocks 
+ The <div> Element
+The <div> element is often used as a container for other HTML elements.
+
+The <div> element has no required attributes, but style, class and id are common.
+
+When used together with CSS, the <div> element can be used to style blocks of content:
+
+TENTANG SPAN ELEMENT utk buat tag jadi inline element :
+The <span> Element
+The <span> element is an inline container used to mark up a part of a text, or a part of a document.
+
+The <span> element has no required attributes, but style, class and id are common.
+
+When used together with CSS, the <span> element can be used to style parts of the text:
+
+HTML Tags
+Tag	Description
+<div>	Defines a section in a document (block-level)
+<span>	Defines a section in a document (inline)
+
+
+-->

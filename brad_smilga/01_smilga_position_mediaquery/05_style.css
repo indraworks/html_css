@@ -1,0 +1,49 @@
+/* reset */
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+div {
+  border: 3px solid red;
+  margin-top: 40px;
+  background: yellow;
+  padding: 10px;
+  position: relative;
+}
+
+p.one {
+
+  background: blue;
+  color: white;
+
+}
+
+.two {
+
+  /* kalau pasang static apapun itu tetap gak ubah normal aja */
+  background: green;
+  color: white;
+
+}
+
+.special {
+  background: purple;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  /* jika div positon:relative dia akan absolute ke div
+     jika .two/.one positon:relative dia akan abolsute ke sini 
+     dia vari parent direct keatas mana yg pos relative!
+  
+  */
+  right: 10%;
+  top: 20%;
+
+}
+
+/*
+https: //www.w3schools.com/css/css_positioning.asp
+position fixed biasanya 
+*/

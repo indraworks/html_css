@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+     div {
+       width:150px;
+       height:150px;
+       
+       position:relative; 
+       margin:30px;
+       background:blue;
+       transition: all 4s;
+     }
+ 
+     h3{ 
+      
+       color:white;
+       margin-top: 65px;
+       margin-left: 40px;
+       margin-right: auto;
+       text-align: center;
+       position:absolute; 
+        } 
+    /* kita mau buat transition ktika di hover */
+      div:hover {
+        transform:translateX(100px);
+      }
+     .ease {
+     
+       transition-timing-function:default;
+     }
+     .ease {
+     
+       transition-timing-function:ease;
+     }
+     .ease {
+     
+       transition-timing-function:linear;
+     }
+     .ease {
+     
+       transition-timing-function:ease-in;
+     }
+     .ease {
+     
+       transition-timing-function:ease-out;
+     }
+     .ease {
+     
+       transition-timing-function:ease-in-out;
+     }
+
+   </style>
+  <title>transiiton Timing Function</title>
+</head>
+<body>
+  <div class="default"><h3>default </h3></div>
+  <div class="ease"><h3> ease</h3></div>
+  <div class="linear"><h3> linear</h3></div>
+  <div class="ease-in"><h3>ease-in </h3></div>
+  <div class="ease-out"><h3> ease-out</h3></div>
+  <div class="ease-in-out"><h3>ease-in-out </h3></div>
+
+</body>
+</html>
+
+
+<!-- kalau ditranstion ada lima
+  yg terhunbung dgn timingnya nanit di animation dipakai lagi:
+  how transiiton tak ea place 
+  transition timing function:
+  transition:all 3s here* 5s ;
+  here disini adalah function timingnya:
+  ease = default jika default;
+  ease = slow startnya,fasr,slow end ( brakhir dgn slow endingnya) ~ease-in-out
+  linear = same equa start dan ending timingnya
+  ease-in = slow diawal /slow start
+  ease-out= slow diakhir
+  ease-in-out:slow-start fast slow-end
+  
+
+-->

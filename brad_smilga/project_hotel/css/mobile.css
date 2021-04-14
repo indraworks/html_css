@@ -1,0 +1,38 @@
+/* ki tabereskan navbar dimula log di tengah  */
+/* logo dibuat float :node dan text aling =center
+biar ditengah jadi smua kalau ini mobil cuman satu column ditengah */
+
+#navbar .logo {
+  float: none;
+  text-align: center;
+}
+
+/* ul dan li jug autk noe biar ditengah */
+#navbar ul,
+#navbar ul li {
+  float: none;
+}
+#navbar ul li a {
+  padding: 5px;
+  border-bottom: #444 dotted 1px;
+}
+
+/* utk home info kita tambahkan 550px agar 
+agar gambarnya ilang  hnaya info img yg ada hiden kalau  */
+#home-info {
+  height: 550px;
+}
+#home-info .info-img {
+  display: none;
+}
+#home-info .info-content {
+  float: none;
+  width: 100%;
+}
+/* atur boes ada 3 (great location,meal,fitnesroom)flaot juga nonde */
+
+.box {
+  float: none;
+  width: 100%;
+}
+/* janga lupa copy media screen link css ke about.html dan contact html */

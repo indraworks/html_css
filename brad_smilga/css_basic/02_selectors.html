@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+     /* eleents selector */
+     body {
+       background-color: #333;
+     }
+
+
+
+    /* internal css  . is for class*/
+    .primary-heading{
+      color:green
+    }
+    /* # is for id */
+   #welcome {
+     background-color: #f4f4f4;
+   }
+   /* multiple selector kit apilih id selctor welcome,about*/
+   /* cara :selctor1,seletror2 {} */
+   #welcome,#about{
+    border:1px solid #ccc;
+    padding:8px; 
+    margin-bottom: 4px;
+   }
+    /* oya yg perlu difrai bawahi aalah padding jarak content tulisan dgn border
+      ada space ruang  content | padding |<--garis tepi luar ( outline)
+      main besar nilai padding maka jarak makin besar maka kotak akan makin lebar
+      /besar
+    
+    */
+
+   /* nested selector kita atur selector anak didalam selector indux */
+   /* kit amau pilih selct paragraf didalm kalang id#wlecome */
+   /* caranya  kalang selecotr_indux <spasi> selector_yg dituju {}*/
+ 
+    #welcome p {
+      font-size: 18px;
+    }
+ #about  {
+   color:whitesmoke
+ }
+ 
+ </style>
+  <title >Document</title>
+</head>
+<body>
+  <div id="welcome">
+     <h1 class="primary-heading">welcome</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus 
+    provident accusantium ex maxime voluptate. Inventore.</p>
+
+  </div>
+    <div id="about">
+      <h1>about</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Esse nostrum autem mollitia minima reiciendis!</p> 
+    </div>
+</body>
+</html>
+
+
+<!-- penjelsana
+ kalau di style kit asakan ada dihalamn css
+ jadi utk pilihan selctor 
+ dari tag mis paragaraf <p> ditulis nama hurfnya si selector saja 
+  p {} ,
+  kalau mau select utk id maka pilihan # nama_id {} kalau class pake dot
+  .nama_class {}
+  nah yg unik adalah id jadi kalau mau sama selct mending pake class selector
+  kalau misalkan didalam class ada id maka bisa langsung tunujuk id #nya atau 
+  mis dari tag sama #id bisa langsung tunuk slect #idnya gak perlu itulis 
+  <tag> #idnya langsun idnya saja
+
+-->
+
+
+
+
+
+
+
+

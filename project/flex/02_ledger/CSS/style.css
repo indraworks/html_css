@@ -1,0 +1,265 @@
+/* import font awesome */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* reset  */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+/* Utility Classes */
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden; /*  */
+}
+
+.py-1 {
+  padding: 1.5rem 0;
+}
+
+.py-2 {
+  padding: 2.2rem 0;
+}
+
+.py-3 {
+  padding: 3.2rem 0;
+}
+
+.p-1 {
+  padding: 1.5rem;
+}
+
+.p-2 {
+  padding: 2.2rem;
+}
+
+.p-3 {
+  padding: 3.2rem;
+}
+
+.text-primary {
+  color: #93cb52;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-dark {
+  background: #333;
+  color: #fff;
+}
+
+.bg-primary {
+  background: #7ab436;
+  color: #fff;
+}
+.l-heading {
+  font-size: 4rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.m-heading {
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+  font-size: 2rem;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  background: #93cb52;
+  padding: 0.3rem 2rem;
+  border: none;
+  border-radius: 5px;
+}
+.btn:hover {
+  background: #7ab436;
+}
+.btn-dark {
+  background: #333;
+  color: #fff;
+}
+
+.list {
+  margin: 0.5rem 0;
+  list-style: none;
+}
+.list li {
+  padding: 0.5rem 0;
+  border-bottom: #444 dotted 1px;
+}
+.bg-primary {
+  background: #93cb52;
+}
+
+input {
+  outline: #f4f4f4;
+  border-color: #f4f4f4;
+  border-radius: 5px;
+}
+/* end utility classes */
+/* Navbar */
+#navbar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: #333;
+  color: #fff;
+  justify-content: space-between;
+  padding: 1rem;
+  z-index: 1;
+}
+#navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+#navbar ul li a {
+  margin: 0 0.3rem;
+  color: #fff;
+  padding: 0.75rem; /*  paddingnya aja di lebarin */
+}
+
+#navbar ul li a:hover {
+  background: #93cb52;
+  border-radius: 5px;
+}
+/* End Navbar */
+
+/* Show Case & Shocase Content */
+#showcase {
+  background: #333 url('../img/showcase.jpg') no-repeat center center/cover;
+  /* itnggi image sluruh view hight port bukan dari isi tulisan maka set 100vh */
+  height: 100vh;
+  color: #fff;
+}
+
+#showcase .showcase-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* supaya dia bisa turun dia harus punya hegiht yg sama dgn parentnya 
+   maka .showcase-content hight= 100% yaitu 100% sama dgn containernya #showcase
+  */
+  height: 100%;
+  padding: 0 2rem;
+  /* overlay :cover utk smua layar 100% juga  */
+  position: absolute;
+  /* smua dari tepi pinggir2 layar */
+  top: 60px; /* masih blum cover mulainya ditrunkan dimulai 63px */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/* End ShowCase */
+
+/* Section What We Do */
+#what .items {
+  display: flex;
+  padding: 1rem;
+}
+#what .items .item {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+}
+/* buat hijau icon bacground */
+#what .items .item i {
+  background: #93cb52;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* End Section What We do  */
+
+/* Who We Are 
+utk sbuah pemgabian dlm flex dan disini 
+tanpa container langsung dari id
+maka utk anak child adalah #id div
+dan di divnya kita buat flex:1 artinya 
+kit abagi rata smua besaran itemnya 
+*/
+#who {
+  display: flex;
+  flex-direction: row;
+}
+#who div {
+  flex: 1;
+}
+.who-img {
+  flex: 1;
+  background: #333 url('../img/people.jpg') no-repeat center center/cover;
+}
+/* End Who We Are */
+.who-text h2 {
+  text-align: center;
+}
+
+/* CLients  catatan items adalah container thd img*5 adi set flex disini */
+#clients .items {
+  display: flex;
+}
+
+#clients .items img {
+  display: block;
+  margin: auto;
+  width: 55%; /* img besarnya 55% dari container */
+}
+
+/* CONTACT & MAP*/
+#contact {
+  display: flex;
+}
+/* #contact div {
+  flex: 1;
+} */
+
+#contact .map,
+#contact .contact-form {
+  flex: 1;
+}
+#contact .contact-form .form-group {
+  margin: 0.75rem;
+}
+
+#contact .contact-form label {
+  display: block;
+}
+/* utk form input dan textarea dibuat 100$ widthnya
+ stlah dipadding 0.5 rem bair rapi ada space dari pinggir from
+*/
+#contact .contact-form input,
+#contact .contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+/* MAP API KEY :AIzaSyARiMxR1d0nRRCYWaQ-kP6wCaDILVC6ZvA */
+/* https://developers.google.com/maps/documentation/javascript/tutorial */

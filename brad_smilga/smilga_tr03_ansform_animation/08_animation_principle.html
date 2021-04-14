@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin:0px;
+      padding:0px;
+    }
+   
+   div {
+     width:200px;
+     height:150px;
+     margin:50px;
+     color:white;
+   }
+   
+  .transition {
+    background:red;
+    transition: all 2s linear;
+  }
+
+  .transition:hover {
+    background:yellow;
+    transform:translateX(100px);
+  }
+  /* beda sama transiiton dibawah  transition 
+     harus ada nama key_ramenya
+     
+   */
+   /* .animation {
+     background: blue;
+     animation-name: move;
+     animation-duration: 10s;
+     
+     animation-iteration-count:2; <--ierasi berapakali?infinite bisa angka 
+     infinite tak terhingga trus menerus
+   } */
+
+   /* shorthand animation ditulis sbb: 
+   animation name_keyframe durations berapa_countnya?*/
+   .animation {
+     background: blue;
+     animation:move 5s 2;
+   }
+
+  @keyframes move {
+    0% {
+      transform: translateX(20px);
+      background: red;
+    }
+    50% {
+      transform: translateX(50px);
+      background:orange;
+
+    }
+    75% {
+      transform: translateX(100px);
+      background:yellow;
+    }
+    80% {
+      transform: translateX(-200px);
+      background:yellowgreen;
+    }
+    100% {
+      transform: translateX(20px);
+      background:blue;
+    }
+  }
+
+
+  </style>
+  <title>Animation principle</title>
+</head>
+
+<body>
+ <div class="transition">transitiion</div>
+ <div class="animation">transitiion</div>
+
+
+</body>
+
+</html>
+
+
+
+<!-- animation beda dgn transition ini  
+berikut ini macamnya :
+
+animation dia beda dgn transition dia 
+mlkaukan pergeseran g=frame perframe per -persentage
+dan ini di bungkus dalam suatu fnntuon decorator
+namanaya @key_frame:nama_animationya
+perframenya tesertah mau dipeah berapa mulai dari
+0% 10%..75%..sd 100%!
+
+syaratnya :
+ada comand :
+aniamtion-name: nama_key_framenya
+animation-duration :brpala lama duratinya dalam 1s
+animtation-iteration-count: brapa lama perulangan animasinya
+pilihan :bisa angka utk infinite itu trus menerus
+
+dan code anmimation atau memulai animation dgn 
+memakai @keyframes
+
+-->

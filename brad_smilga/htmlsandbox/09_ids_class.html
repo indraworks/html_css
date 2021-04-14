@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+     .card {
+       border:1px solid #ccc;
+       background:#f4f4f4;
+       padding:20px;
+       margin-bottom: 10px;
+     }
+     .enhance {
+       color:yellow;
+       background-color: black;
+     }
+  </style>
+  <title>DIv Span id and class</title>
+</head>
+<body>
+  <div id="main-header">
+  <h1>My WebSite</h1>
+   <p>A site about me</p>
+
+  </div>
+ <ul id="main-nav">
+   <li><a href="#">Home</a></li>
+   <li><a href="#">About</a></li>
+   <li><a href="#">Contact</a></li>
+ </ul>
+  <div id="about" class="card">
+    <h3>About</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur 
+      adipisicing elit. <span class="enhance">Voluptas, 
+      animi. Qui itaque </span> quo labore neque!</p>
+  </div>
+  <div id="contact" class="card">
+     <h3>Contact Me</h3>
+      <ul>
+        <li>Address:50 Main st,Boston Ma</li>
+        <li>Phone:(555) 555-5555</li>
+        <li>EMial:me@indraworks.com</li>
+      </ul>
+  </div>
+  <div id="footer">
+      <h3>copyright 2019</h3>
+
+  </div>
+</body>
+</html>
+
+
+<!-- KITA bAHAS TENTANG Class dan id (#) jadi kalau beda class dan id adalah
+  dalam sbuah tag dgn tag yg lain yg trkumputl dalam 1 pag maka penggunaan id 
+  adalah uniq gak boleh sama ,beda dgn class class boleh sma namanya
+  dan gak uniq kbnayakan class itu ngarah yg diblock akrena atributnya lebih kegaina 
+  element yg besar ,
+  sedangkan id # di canangkan /implenetasi utk yg inline mis dalam sbuah paragar
+  bisa kitaatur propertynya elemetn yg ddalam sbuah blok tag
+oya kit agunakan emet jadi kalau  mau nilis class
+cuku ketik dot nama class
+sbb: .nav-header  otomatis jdi sgn div didpean 
+kalau mau tilis id cukup
+sbb:#main-header
+otomatis akan jadi dgn div nya didepan 
+contoh diatas kit abuat style namanya class card
+dan kita apply di bagain taf about dan contact
+jadi class boleh sama gak masalah 
+utk yg unik pengaturan didalam page thd element kita gunakan 
+id ,utk pngatua spesifi non block kita gunakan 
+<span>
+ -->

@@ -1,0 +1,29 @@
+* {
+  padding:0px;
+  margin:0px;
+  box-sizing: border-box;
+}
+div {
+  width:150px;
+  height:150px;
+  display:inline-block;
+}
+
+.one {
+  background:red;
+  /* transform:translateX(50%); */
+}
+.two {
+  background:blue;
+  /* transform:translateY(50%); */
+  /* kalau 50% atau sama dgn 75px dari 50% height 
+  kalau posotif arahya kebawah ,kalau negatif keatas
+  */
+ 
+}
+.three {
+  background:green;
+  /* transform:translateX(-50px); */
+  /* kalau negatif kekiri sejauh pxnya  */
+   transform: translate(-225px, 75px);
+}

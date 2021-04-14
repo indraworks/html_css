@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+   body {
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 18px;
+     line-height: 1.6em;
+   }
+   /* cara targeting atur selector span dilam #welcom dan paragraf */
+    #welcome p span {
+      font-weight: bold;
+    }
+
+   /* cara targrting atur selector span ddlm #about  p :atur tulisan italic*/
+    #about p span {
+      font-style: italic;
+    }
+ </style>
+
+
+  <title>Fonts</title>
+</head>
+<body>
+  <div id="welcome">
+     <h1 class="primary-heading">welcome</h1>
+    <p>Lorem ipsum dolor sit <span>amet consectetur adipisicing elit</span>. Accusamus 
+    provident accusantium ex maxime voluptate. Inventore.</p>
+
+  </div>
+    <div id="about">
+      <h1>about</h1>
+      <p>Lorem ipsum dolor sit amet consectetur <span>
+          adipisicing elit.
+         Esse nostrum autem
+      </span> mollitia minima reiciendis!</p> 
+    </div>
+</body>
+</html>
+
+
+<!-- 
+
+  utk sanserif = tulisan lebih modern 
+  tidak ada tanduk diujung2 atau siku2
+  kalau serif= vesi lama modelnya ada siku
+  kalau kit apanggil type font-family:fon1,font2,font3
+  maka di compiler urut dipanggil yg bagian font1 dulu dari daftar
+  kalau tak ada dst smpau yg no3( pasti adanya)
+  sumber web safe font akan sediakan pada semua browser
+   kalau mau sumber lain kit abisa ambil dari google.fonts 
+   slah satu yg favortite adalah roboto ,di goolge fonts search roboto
+   klik tanda + ,pilih nnti popup ,select yg copy link nah diatas style 
+   kit ataruh link tsb
+   cara panggil: font-family:'roboto',sanserif;
+   ada tanda petiknya ,dan harus ada juga sanserif buat cadangan jika link google font tak
+   bisa balik kedefault
+  - font-Size:16px ( standar html)
+   -line-height digunakan utk atur ketingian tiap line dibaris tulisan
+   shigga antar line tulisan ada jarak 
+-->
+
+

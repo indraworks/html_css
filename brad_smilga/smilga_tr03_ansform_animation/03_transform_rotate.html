@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    div {
+      display:inline-block;
+      width:150px;
+      height:170px;
+    }
+
+    .one {
+      background:red;
+      transform: rotateX(80deg);
+      /* akan mengecil height nya /veritikal karen 
+      diputar dgn poros sumbu x ( atas -bawah putaranya) */
+     
+    }
+    .two {
+      background:blue;
+      /* transform: rotateY(80deg); */
+       /* akan mengecil width nya /mendatar karen 
+      diputar dgn poros sumbu y ( akiri-kanan putarannya) */
+     
+    }
+    .three {
+      background:green;
+      /* transform:rotate(45deg); */
+      transform:translateX(-100px);
+      /* akan berputar putarannya 120deg dalam bidang screen atau gambar  */
+     /* kalo rotate z dia akan naik kebidan g paling atas gambar dan enimpa teman 
+       bidang datar yg lain maju kedepan dan baru diputar searah bidang gambar
+     */
+      transform:rotateZ(45deg);
+
+    }
+
+   /* rotate adalah memutar bidang tersebut diatas
+   kalau rotateY maka bidang diputar pada arah sumbu x dia berdiri putarya tegak kiri kanan melikar
+   kalau rotateX dia berada di sumbu x tapi diputar dari atas kebawah /putaranya
+  kalau rotate sja berarti dia diputar dalam bisang tergambar yg kit alihat
+  hadapa2 an dgn kita contoh diaas
+   */
+       
+    
+  </style>
+  <title>transform rotate</title>
+</head>
+<body>
+  <div class="one"></div>
+  <div class="two"></div>
+  <div class="three"></div>
+  
+</body>
+</html>

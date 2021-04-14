@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      background: #555;
+      display: flex;
+      justify-content:space-evenly;
+      /* OPTIONS justify-content
+         flex-start
+         flex-end
+         center
+         space-between
+         space-around
+         space-evenly
+            
+      */
+      height:600px;
+      /* alig-item atur vertikal
+         pilihanya :
+      */
+
+      
+    }
+    .item {
+     padding: 1rem;
+     margin:0.5rem;
+     background: #f4f4f4;
+     border:solid 1px #ccc;
+     text-align: center;
+     /* width: 300px; */
+     flex-basis: 300px;
+    }
+
+  </style>
+  
+  <title>FLex align & Order</title>
+</head>
+<body>
+  <div class="container">
+
+    <div class="item"><h3>item 1</h3></div>
+    <div class="item"><h3>item 2</h3></div>
+    <div class="item"><h3>item 3</h3></div>
+
+
+  </div>
+  
+</body>
+</html>
+
+
+<!-- 
+pengaturan flex :
+diatur pada container /parent
+dibagi 3 scra default dia itu rata sbagai rows
+jadi :
+  -justify-content:pengaturan utk arah baris (row) defautl dari kiri-kanan
+  -align-items :pengaturan dari sumbu y (vertikal) default dari atas kebawah
+                
+
+
+///margin:
+kalau itm mau ada width di flex namanya flex-basis
+kita set disini flex-basis:300px;
+
+//// PENGATURAN JUSTIFY CONteNT (ROW)////
+ /* pengaturan justify content (yg sring dipakai
+  - center :smua item akan ditengah
+  -space-between: dari pinggir ga ada space
+  diisi item ,tapi disi menuju ketengah ngasih space yg sama
+  (jadi item kiri kanan edge gak ada space item ada di tepi kiri kana
+  space disdiakan diatara item slanjutnya
+  )
+  -space-arround:smua edge ada space dan tiap sisi dari edge ada tuang space
+  dan sela tiap2 item ada space
+  -space-evently: mirip space-around ,lebih lebar dia mulai dari edge krii dan kanan
+  smua rata sama besarnya dgn tiap2 sela per item!
+  #justify-contenct:space-arround,space-between,space-center,space-evently
+  
+  
+  ) */
+
+  /// PENGATURAN ALIGN-ITEMS ( utk column)///
+    syarat:harus ada height! height dibuat dulu baru bisa ada item pada space vertikal 
+    yg diatur dlm contoh diatas heighr 600px
+
+
+
+
+
+
+ -->
+
+ 

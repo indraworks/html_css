@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* 
+    shring artinya srinking mgnkuti besaran dan tak berubah
+    jadi gini mislakan salah satu item box diset 400px widthnya maka 
+    kalau dia di layar mobile dia akan tetap sama kedudukan ya 
+    nah tetnunya yg lain akan terrdesal utk supaya tetap dalam content container
+    dibuat piihan flex-wrap
+    intinya shring ini jaga agar seting property pada item/anak besaran tak brubah
+    walaupun berada di media screen manapun (xl,xd,lg,xl)
+     defail all chiler flex-shrink=1;
+     
+     */
+     .container {
+       
+        border:1px solid red;
+        display:flex;
+      
+             
+      }
+     
+      .box-3 {
+       /*box-3 dibuat agar 300px dimedia manapun utk itu felx-shrink default :1 wajib 
+       diset flex-shring:0 pada item yg mau dishrinking;
+       setting id container */
+
+       width:500px;
+         flex-shrink: 0;
+      }
+
+
+   
+
+     .box {
+       padding:30px;
+       text-align: center;
+       font-size: 30px;
+       color:#f3f3f3;
+      
+     }
+      .box-1 {
+        background:#581f18;
+    
+      }
+      .box-2{
+        background:#f0a202;
+      }
+      .box-3 {
+        background:#d95d39;
+      }
+      .box-4 {
+        background:#202c59;
+      }
+      .box-5 {
+        background:#51cb28;
+      }
+  
+
+
+  </style>
+
+
+  <title>flex-grow</title>
+</head>
+<body>
+  <!-- cara:.container>.box.box-${box-$}*5 -->
+     <div class="container">
+       <div class="box box-1">box-1</div>
+       <div class="box box-2">box-2</div>
+       <div class="box box-3">box-3</div>
+       <div class="box box-4">box-4</div>
+       <div class="box box-5">box-5</div>
+     </div>
+</body>
+</html>
+
+<!-- 
+  utk belajar :https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+align content adalah jika buat item2 itu lebih dari 12 box mis lebih dari satu line /baris
+maka kita akan buat tambahanya space sisa menyul dibawahnya dan kita atur juga dlm sbuah content 
+bukan baris tetap jadi satu kesatuan dan mereka baris atas yg lebih geser dan sisia mnjadi baris baru
+adalah satu kesatuan content 
+nah utk setting kelebihan dalam hal ini box-G maka digunakan flex-wrap:wrap <pilihanya>
+ -->
+
+

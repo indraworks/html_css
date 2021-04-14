@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 hal Inline,block,inline-block</title>
+  <style>
+    /* jgn lupa utk box-sizingnya jika mau buat box float/inline
+     agara tidak melebear padingnya atau bearnya widtetap
+     */
+     * {
+       box-sizing: border-box;
+     }
+    /* target selector adalah Li nya yg dibuat dari normal blcok to inline */
+     .myInline li {
+       display: inline;
+       list-style: none;
+     }
+    /* a nya kit abuat text decorator ilang dan ada space */
+     .myInline  a {
+      text-decoration: none;
+      padding-right: 20px;
+
+     }
+   /*
+     normali inlime element to block
+    bagian image selector dibuat supaya gmbar ada ditengah*/
+    img {
+      display:block;
+      margin:auto;
+    }
+
+/* kita mau buat box inline dan berdampingan  */
+   .box {
+     border:1px #333 solid;
+     width:24%;
+     padding:0 10px;
+     background: #f4f4a0;
+     display:inline-block; /*kalau diinline gak akan bisa harus inlineblock */
+   }
+
+  </style>
+</head>
+<body>
+  <ul class="myInline">
+    <!-- defaultnya li adalah diplay blcok kita akan seting jadi inline -->
+    <li><a href="#">Education</a> </li>
+    <li><a href="#">Bussiness</a> </li>
+    <li><a href="#">Marketing</a> </li>
+  </ul>
+  <br> <br>
+  <img src="./images/leaf.png" alt="myleaf1">
+  <img src="./images/leaf.png" alt="myleaf1">
+
+  <br> <br> <br>
+  <!-- kita mau buat inine box jadi inline tapi juga bisa blcok'
+    yaitu masing2 content/elemtn ada jaraknya bisa cross-->
+    <div class="box">
+       <h3>Box-1</h3>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo itaque 
+         repellat facilis nisi beatae 
+         officia recusandae necessitatibus quo laudantium voluptas?</p>
+
+    </div>
+    <div class="box">
+       <h3>Box-2</h3>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo itaque 
+         repellat facilis nisi beatae 
+         officia recusandae necessitatibus quo laudantium voluptas?</p>
+
+    </div>
+    <div class="box">
+       <h3>Box-3</h3>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo itaque 
+         repellat facilis nisi beatae 
+         officia recusandae necessitatibus quo laudantium voluptas?</p>
+
+    </div>
+    <div class="box">
+       <h3>Box-4</h3>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo itaque 
+         repellat facilis nisi beatae 
+         officia recusandae necessitatibus quo laudantium voluptas?</p>
+
+    </div>
+
+
+
+</body>
+</html>
+
+
+
+<!-- CATATAN PALING PENTING!
+display :inline , adlah kamu mau alignment mmbuat dia ini dalam satu baris 
+jadi ada contenctmu itu masih dalam satu baris dipisah jarak space masing2 elemetnmu saja 
+tapi gak akan sd pinah lain utk contecnt elelent berikutnya yg hendak kamu tambahkan 
+smuanya akan selalu inline /selalu dalam sbaris 
+sifat inline DIA GAK BISA NGATUR MARGIN AUTO! sbab harus dijadikan block dulu 
+baru bisa element ada ditengah2 
+
+
+
+display:block ,ini mmseting element yg kita buat agar dia conent aata element berikutnya
+utk sebelahnya dia harus di bawah line contenct sblumnya
+sifat blocking DAI GAK BisA SETTING width dlm %
+-kit abisa lihat utk contecnt UL LI adlah mrupakan contenct  element yg defaultnya ada
+lah  blockung caranya coba ke inspeck sorot li kalau trus garis biru sd ujung 
+line kiri kekakna barrti dia makan sabaris block spanjag page html itu artinya dia block
+display blcok ,jadi element contenct itu habiskan width line 1 page tidak bergabi dgn contecnt yg lain yg akan 
+ada di seblahnya jadi contc baru harus ada di bawah lineya .
+
+
+dispay :inline-block nah ini adalah gabungan 2 2  diatas jadi stlah inline dia bisa 
+di buat pindah baris d
+
+element2 di html ada yg default bloc contohnya skrg adalah ul>li
+ini blcik kita jadikan inline saat ini lihat contoh diatas
+
+///// Image //// kita mau buat image utk image dia sudah inline defaultnya
+dan kita kalau kita mau buat margin auto ,utk element yg defaultnya  inlinemacam 
+macam image dan kawan2 bisa tengok di w3school element mana yg inine
+maka harus diubah ke block dulu baru stlahnbisa jadikan margin auto supaya dia
+bisa ada ditenah halaman kalau kita ada susun begini maka dia akan berdampingan
+<img src="./images/leaf.png" alt="myleaf1">
+  <img src="./images/leaf.png" alt="myleaf1">
+utk itu kita bikin block
+img {
+  display:block;
+  margin:auto;
+
+}
+-->
