@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* kit aakn mbuat child disini dan pakai li  */
+  /* kit aakan select kelir utk li item no.1 */
+   li:first-child {
+     background:red;
+   }
+   /* kalau mau kelir warnain last child  */
+   li:last-child {
+     background:yellowgreen;
+   }
+
+   /* utk spcisif chil no  */
+   li:nth-child(3) {
+     background:pink !important;
+     /* kit abisa buat supaya gak kena effect dan jadi pemenang
+     dgn beri importan  */
+   }
+
+   /*misalkna mau warna klipatan 3 dan offsert dari nol  */
+   li:nth-child(3n+0) {
+     background:yellow;
+   }
+  /*  jika misalkan start dari no 7 
+  warna tulisan jadi purple*/
+  li:nth-child(3n+7) {
+    color:purple;
+  }
+
+  /* utk setiap ganjil odd smua bacground jadi grey */
+  li:nth-child(odd) {
+    background:#ccc;
+  }
+</style>
+  
+  <title>Nth child</title>
+</head>
+<body>
+  <h1>Pelajaran tetang child</h1>
+   <ul>
+     <li>item 1</li>
+     <li>item 2</li>
+     <li>item 3</li>
+     <li>item 4</li>
+     <li>item 5</li>
+     <li>item 6</li>
+     <li>item 7</li>
+     <li>item 8</li>
+     <li>item 9</li>
+     <li>item 10</li>
+     <li>item 11</li>
+     <li>item 12</li>
+     <li>item 13</li>
+     <li>item 14</li>
+     <li>item 15</li>
+     <li>item 16</li>
+     <li>item 17</li>
+     <li>item 18</li>
+     <li>item 19</li>
+     <li>item 20</li>
+   </ul>
+</body>
+</html>
