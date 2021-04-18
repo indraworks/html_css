@@ -4,14 +4,114 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style></style>
+  <style>
+    body {
+      font-family:Arial;
+      background: #333;
+      color:#fff;
+    }
+    header {
+      display:flex;
+      text-align:center;
+      flex-direction: column;
+      justify-content:center;
+      align-items: center;
+      height:100vh;
+          
+    }
+   
+     /* kita buat kasih before header utk pasang background (ini secara veritacal jadi tulisan hader nati didepana utk iut
+     ada z-indexnya  = -1 (dia ada di blakakng)
+     oya kita gak insert content yg mruoakan syrat wajib biasanya kalau taruh before atau after
+     
+     ) */
+     header:before {
+       content: '';
+        background: url('https://source.unsplash.com/1600x900/?nature,water')
+          no-repeat center center/cover;
+        position: absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+        z-index:-1;
+        opacity: 0.3;
+       /* 
+       gambar gak akan muncul jika position tidak absolute
+       yaitu kita buat posisi mulai dari kiri atas 
+       left:0,
+       top:0
+       dan cover sluruh layar fng kasih width dan height 100%
+       gak akan muncul kalau blum x-index:-1  artiny adia gambar seblum 
+       header dari sisi layer ,header diatasnya,
+       kalau contoh sblumnya pakai input itu kalau before berarti dia sebelah kiri 
+       dari label
+         
+       
+       */
+       
+     }
+  header > h1 {
+       font-size: 4rem;
+       margin:1rem;
+     }
+    .is-required:after {
+      content:'*';
+    }
+
+  </style>
   <title>Peudo Selector before and after</title>
 </head>
 <body>
-  
+  <!-- <h1>example form</h1>
+   <form action="">
+     <label class="is-required" for="name">Name</label>
+     <input type="text" id="name" name="name">
+      
+   </form> -->
+   <header>
+     <h1>Hello World</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
+   </header>
+   <section>
+     <h3>this is section</h3>
+     <p>Lorem ipsum dolor sit amet consectetur 
+       adipisicing elit. Unde ab in fuga at! Velit 
+       quae laborum accusantium 
+       consequuntur illum consequatur.</p>
+   </section>
 </body>
 </html>
 
+
+<!-- sebenarnya maksundy aapa ini :before
+dan :after nah ini artinya kita menlusisbuah sintak 
+css tapi di browser jadi gak di css-nya dimana 
+efeknya ditampilkan di bagian object 
+yang akan dikenai mis diatas object yg dikenai adalaj 
+input berdasarkan class yg kita buat
+jadi nanti pas doborser html gak ada dia
+atau contentnya  tanda asterisk tsb di cssnya
+jadi sekali lagi kalau di eelemnt html mark up gak ada 
+itu tanda * dia ditulis di broser css
+jadi ini digunakan paling sering utk overlay 
+nanti akan kita bahas!
+
+-->
+
+<!-- mnegenai overlay ,pesudo element before
+nah kalau diatas maksudnya itu kalau before dia ada
+ sblum 
+jaid kita buat contentnya 
+apa yg mau diisi atau element yg lain 
+In CSS, ::before creates a pseudo-element that is the first child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default. /* 
+Add a heart before links */ a::before { content: "♥"; }
+nah pada overlay kit aakan mengisi background dgn div yg sma 
+penggunaan before adalah sblum eleemnt utama 
+contoh text header dan section 
+sblum itu kita pasang overlay suatu bidang gambar yg besar 
+
+-->
 
 
 
